@@ -38,4 +38,8 @@ jobs:
         }
         Write-Output "Version: $Version"
         dotnet pack -p:PackageVersion=$Version -p:Version=$Version
+
+    - name: Pack
+      run: |
+        dotnet nuget push ".\HyperJet\bin\*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source https://api.nuget.org/v3/index.json
       if: github.event_name == 'release' && github.event.action == 'published'
