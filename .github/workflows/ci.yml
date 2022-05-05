@@ -32,7 +32,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
 
-    - name: Publish
+    - name: Pack
       run: |
         if ($env:TAG_NAME -ne $null) {
           $Version = $([Regex]::Matches($env:TAG_NAME, "v(\d+(?:\.\d+)+(?:-\w+)?)").groups | Where-Object Name -eq 1).value
@@ -42,7 +42,7 @@ jobs:
         Write-Output "Version: $Version"
         dotnet pack -p:PackageVersion=$Version -p:Version=$Version
 
-    - name: Pack
+    - name: Publish
       run: |
-        dotnet nuget push ".\HyperJet\bin\*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source https://api.nuget.org/v3/index.json
+        dotnet nuget push ".\HyperJet\bin\*.nupkg" --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
       if: github.event_name == 'release' && github.event.action == 'published'
