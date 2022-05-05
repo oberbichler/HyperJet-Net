@@ -25,7 +25,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Pack
       run: |
-        if ($env:TAG_NAME -ne "") {
+        if ($env:TAG_NAME -ne $null) {
           $Version = $([Regex]::Matches($env:TAG_NAME, "v(\d+(?:\.\d+)+(?:-\w+)?)").groups | Where-Object Name -eq 1).value
         } else {
           $Version = "0.0.0"
