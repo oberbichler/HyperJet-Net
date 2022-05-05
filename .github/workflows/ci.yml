@@ -12,17 +12,23 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
+
     - name: Restore dependencies
       run: dotnet restore
+
     - name: Build
       run: dotnet build --no-restore
+
     - name: Test
       run: dotnet test --no-build --verbosity normal
+
     - name: Pack
       run: |
         if ($env:TAG_NAME -ne $null) {
@@ -30,5 +36,6 @@ jobs:
         } else {
           $Version = "0.0.0"
         }
-        Write-Output "Version = $Version"
+        Write-Output "Version: $Version"
         dotnet pack -p:PackageVersion=$Version -p:Version=$Version
+      if: github.event_name == 'release' && github.event.action == 'published'
