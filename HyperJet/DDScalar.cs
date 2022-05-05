@@ -46,6 +46,10 @@ public class DD1Scalar : IScalar
         return result;
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -295,6 +299,10 @@ public class DD2Scalar : IScalar
         return (variable0, variable1);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -580,6 +588,10 @@ public class DD3Scalar : IScalar
         return (variable0, variable1, variable2);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -907,6 +919,10 @@ public class DD4Scalar : IScalar
         return (variable0, variable1, variable2, variable3);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -1282,6 +1298,10 @@ public class DD5Scalar : IScalar
         return (variable0, variable1, variable2, variable3, variable4);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -1711,6 +1731,10 @@ public class DD6Scalar : IScalar
         return (variable0, variable1, variable2, variable3, variable4, variable5);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -2200,6 +2224,10 @@ public class DD7Scalar : IScalar
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -2755,6 +2783,10 @@ public class DD8Scalar : IScalar
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -3382,6 +3414,10 @@ public class DD9Scalar : IScalar
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -4087,6 +4123,10 @@ public class DD10Scalar : IScalar
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -4876,6 +4916,10 @@ public class DD11Scalar : IScalar
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
@@ -5755,6 +5799,10 @@ public class DD12Scalar : IScalar
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10, variable11);
     }
 
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 

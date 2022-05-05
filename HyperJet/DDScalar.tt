@@ -132,6 +132,10 @@ for (var i = 0; i < size; i++)
 <#
 }
 #>
+    public override string ToString()
+    {
+        return $"{Constant}hj";
+    }
 
     // Data access
 
