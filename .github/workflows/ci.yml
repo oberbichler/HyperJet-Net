@@ -41,6 +41,8 @@ jobs:
         }
         Write-Output "Version: $Version"
         dotnet pack -p:PackageVersion=$Version -p:Version=$Version
+      env:
+        TAG_NAME: ${{ github.event.release.tag_name }}
 
     - name: Publish
       run: |
