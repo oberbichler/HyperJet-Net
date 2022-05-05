@@ -23,3 +23,12 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: Pack
+      run: |
+        if ($env:TAG_NAME -ne "") {
+          $Version = $([Regex]::Matches($env:TAG_NAME, "v(\d+(?:\.\d+)+(?:-\w+)?)").groups | Where-Object Name -eq 1).value
+        } else {
+          $Version = "0.0.0"
+        }
+        Write-Output "Version = $Version"
+        dotnet pack -p:PackageVersion=$Version
