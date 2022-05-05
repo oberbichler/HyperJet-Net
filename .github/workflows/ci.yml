@@ -34,17 +34,17 @@ jobs:
 
     - name: Pack
       run: |
-        if ($env:TAG_NAME -ne $null) {
+        if ($env:TAG_NAME -ne "") {
           $Version = $([Regex]::Matches($env:TAG_NAME, "v(\d+(?:\.\d+)+(?:-\w+)?)").groups | Where-Object Name -eq 1).value
         } else {
           $Version = "0.0.0"
         }
         Write-Output "Version: $Version"
-        dotnet pack -p:PackageVersion=$Version -p:Version=$Version
+        dotnet pack -c Release -p:PackageVersion=$Version -p:Version=$Version
       env:
         TAG_NAME: ${{ github.event.release.tag_name }}
 
     - name: Publish
       run: |
-        dotnet nuget push ".\HyperJet\bin\*.nupkg" --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
+        dotnet nuget push ".\HyperJet\bin\Release\*.nupkg" --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
       if: github.event_name == 'release' && github.event.action == 'published'
