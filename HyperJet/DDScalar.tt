@@ -85,7 +85,25 @@ for (var i = 0; i < size; i++)
 #>
     }
 
-<# for (var i = 0; i < size; i++) { #>
+<#
+if (size == 1)
+{
+#>
+    public static <#= scalar #> Variable(double constant)
+    {
+        var result = new <#= scalar #>();
+        result.Constant = constant;
+        result.D0 = 1;
+        return result;
+    }
+
+<#
+}
+else
+{
+    for (var i = 0; i < size; i++)
+    {
+#>
     public static <#= scalar #> Variable<#= i #>(double constant)
     {
         var result = new <#= scalar #>();
@@ -94,7 +112,26 @@ for (var i = 0; i < size; i++)
         return result;
     }
 
-<# } #>
+<#
+    }
+#>
+    public (<#= scalar #><# for (var i = 1; i < size; i++) { #>, <#= scalar #><# } #>) Variables(double constant0<# for (var i = 1; i < size; i++) { #>, double constant<#= i #><# } #>)
+    {
+<#
+for (var i = 0; i < size; i++)
+{
+#>
+        var variable<#= i #> = Variable<#= i #>(constant<#= i #>);
+<#
+}
+#>
+
+        return (variable0<# for (var i = 1; i < size; i++) { #>, variable<#= i #><# } #>);
+    }
+
+<#
+}
+#>
 
     // Data access
 
