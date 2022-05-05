@@ -29,7 +29,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
 
-    - name: Pack
+    - name: Publish
       run: |
         if ($env:TAG_NAME -ne $null) {
           $Version = $([Regex]::Matches($env:TAG_NAME, "v(\d+(?:\.\d+)+(?:-\w+)?)").groups | Where-Object Name -eq 1).value
