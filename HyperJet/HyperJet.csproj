@@ -6,6 +6,13 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<PackageId>HyperJet</PackageId>
+		<Description>Algorithmic differentiation with multivariate hyper-dual numbers in C#</Description>
+		<Authors>Thomas Oberbichler</Authors>
+		<Company>Thomas Oberbichler</Company>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<PackageReference Include="System.Memory" Version="4.5.4" />
 	</ItemGroup>
