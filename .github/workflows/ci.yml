@@ -31,4 +31,4 @@ jobs:
           $Version = "0.0.0"
         }
         Write-Output "Version = $Version"
-        dotnet pack -p:PackageVersion=$Version
+        dotnet pack -p:PackageVersion=$Version -p:Version=$Version
