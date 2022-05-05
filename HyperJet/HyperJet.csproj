@@ -11,7 +11,17 @@
 		<Description>Algorithmic differentiation with multivariate hyper-dual numbers in C#</Description>
 		<Authors>Thomas Oberbichler</Authors>
 		<Company>Thomas Oberbichler</Company>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/oberbichler/HyperJet-Net</RepositoryUrl>
+		<PackageTags>algorithmic differentiation; automatic differentiation; hyperdual numbers; gradient; hessian</PackageTags>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="System.Memory" Version="4.5.4" />
