@@ -13,8 +13,8 @@ public struct DD1Vector3
     public DD1Vector3(DD1Scalar x, DD1Scalar y, DD1Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -102,8 +102,8 @@ public struct DD2Vector3
     public DD2Vector3(DD2Scalar x, DD2Scalar y, DD2Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -191,8 +191,8 @@ public struct DD3Vector3
     public DD3Vector3(DD3Scalar x, DD3Scalar y, DD3Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -280,8 +280,8 @@ public struct DD4Vector3
     public DD4Vector3(DD4Scalar x, DD4Scalar y, DD4Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -369,8 +369,8 @@ public struct DD5Vector3
     public DD5Vector3(DD5Scalar x, DD5Scalar y, DD5Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -458,8 +458,8 @@ public struct DD6Vector3
     public DD6Vector3(DD6Scalar x, DD6Scalar y, DD6Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -547,8 +547,8 @@ public struct DD7Vector3
     public DD7Vector3(DD7Scalar x, DD7Scalar y, DD7Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -636,8 +636,8 @@ public struct DD8Vector3
     public DD8Vector3(DD8Scalar x, DD8Scalar y, DD8Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -725,8 +725,8 @@ public struct DD9Vector3
     public DD9Vector3(DD9Scalar x, DD9Scalar y, DD9Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -814,8 +814,8 @@ public struct DD10Vector3
     public DD10Vector3(DD10Scalar x, DD10Scalar y, DD10Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -903,8 +903,8 @@ public struct DD11Vector3
     public DD11Vector3(DD11Scalar x, DD11Scalar y, DD11Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access
@@ -992,8 +992,8 @@ public struct DD12Vector3
     public DD12Vector3(DD12Scalar x, DD12Scalar y, DD12Scalar z)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
-        Z = z ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
+        Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
     // Data access

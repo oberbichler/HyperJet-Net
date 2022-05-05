@@ -25,7 +25,7 @@ public struct <#= vector #>
     public <#= vector #>(<#= scalar #> x, <#= scalar #> y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access

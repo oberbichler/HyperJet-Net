@@ -12,7 +12,7 @@ public struct DD1Vector2
     public DD1Vector2(DD1Scalar x, DD1Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -92,7 +92,7 @@ public struct DD2Vector2
     public DD2Vector2(DD2Scalar x, DD2Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -172,7 +172,7 @@ public struct DD3Vector2
     public DD3Vector2(DD3Scalar x, DD3Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -252,7 +252,7 @@ public struct DD4Vector2
     public DD4Vector2(DD4Scalar x, DD4Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -332,7 +332,7 @@ public struct DD5Vector2
     public DD5Vector2(DD5Scalar x, DD5Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -412,7 +412,7 @@ public struct DD6Vector2
     public DD6Vector2(DD6Scalar x, DD6Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -492,7 +492,7 @@ public struct DD7Vector2
     public DD7Vector2(DD7Scalar x, DD7Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -572,7 +572,7 @@ public struct DD8Vector2
     public DD8Vector2(DD8Scalar x, DD8Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -652,7 +652,7 @@ public struct DD9Vector2
     public DD9Vector2(DD9Scalar x, DD9Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -732,7 +732,7 @@ public struct DD10Vector2
     public DD10Vector2(DD10Scalar x, DD10Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -812,7 +812,7 @@ public struct DD11Vector2
     public DD11Vector2(DD11Scalar x, DD11Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
@@ -892,7 +892,7 @@ public struct DD12Vector2
     public DD12Vector2(DD12Scalar x, DD12Scalar y)
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
-        Y = y ?? throw new ArgumentNullException(nameof(x));
+        Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
     // Data access
