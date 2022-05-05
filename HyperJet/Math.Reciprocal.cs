@@ -1,4 +1,7 @@
 ﻿namespace HyperJet;
+
+using System;
+
 public static partial class MathD
 {
     public static D1Scalar Reciprocal(D1Scalar a)

@@ -28,14 +28,14 @@ public class D1Scalar : IScalar
         Constant = constant;
         D0 = d0;
     }
-
+    
     public D1Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
         D0 = data[1];
     }
 
-    public static D1Scalar Variable0(double constant)
+    public static D1Scalar Variable(double constant)
     {
         var result = new D1Scalar();
         result.Constant = constant;
@@ -47,32 +47,32 @@ public class D1Scalar : IScalar
     // Data access
 
     public int Size { get; } = 1;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 2);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 2)
-            throw new IndexOutOfRangeException();
+		if (i >= 2)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 1)
-            throw new IndexOutOfRangeException();
+		if (i >= 1)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -90,7 +90,7 @@ public class D1Scalar : IScalar
         result.D0 = da * a.D0 + db * b.D0;
         return result;
     }
-
+    
     public static D1Scalar Forward(double constant, double da, double db, double dc, D1Scalar a, D1Scalar b, D1Scalar c)
     {
         var result = new D1Scalar(constant);
@@ -197,7 +197,7 @@ public class D2Scalar : IScalar
         D0 = d0;
         D1 = d1;
     }
-
+    
     public D2Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -221,36 +221,44 @@ public class D2Scalar : IScalar
         return result;
     }
 
+    public (D2Scalar, D2Scalar) Variables(double constant0, double constant1)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+
+        return (variable0, variable1);
+    }
+
 
     // Data access
 
     public int Size { get; } = 2;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 3);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 3)
-            throw new IndexOutOfRangeException();
+		if (i >= 3)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 2)
-            throw new IndexOutOfRangeException();
+		if (i >= 2)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -270,7 +278,7 @@ public class D2Scalar : IScalar
         result.D1 = da * a.D1 + db * b.D1;
         return result;
     }
-
+    
     public static D2Scalar Forward(double constant, double da, double db, double dc, D2Scalar a, D2Scalar b, D2Scalar c)
     {
         var result = new D2Scalar(constant);
@@ -380,7 +388,7 @@ public class D3Scalar : IScalar
         D1 = d1;
         D2 = d2;
     }
-
+    
     public D3Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -413,36 +421,45 @@ public class D3Scalar : IScalar
         return result;
     }
 
+    public (D3Scalar, D3Scalar, D3Scalar) Variables(double constant0, double constant1, double constant2)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+        var variable2 = Variable2(constant2);
+
+        return (variable0, variable1, variable2);
+    }
+
 
     // Data access
 
     public int Size { get; } = 3;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 4);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 4)
-            throw new IndexOutOfRangeException();
+		if (i >= 4)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 3)
-            throw new IndexOutOfRangeException();
+		if (i >= 3)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -464,7 +481,7 @@ public class D3Scalar : IScalar
         result.D2 = da * a.D2 + db * b.D2;
         return result;
     }
-
+    
     public static D3Scalar Forward(double constant, double da, double db, double dc, D3Scalar a, D3Scalar b, D3Scalar c)
     {
         var result = new D3Scalar(constant);
@@ -577,7 +594,7 @@ public class D4Scalar : IScalar
         D2 = d2;
         D3 = d3;
     }
-
+    
     public D4Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -619,36 +636,46 @@ public class D4Scalar : IScalar
         return result;
     }
 
+    public (D4Scalar, D4Scalar, D4Scalar, D4Scalar) Variables(double constant0, double constant1, double constant2, double constant3)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+        var variable2 = Variable2(constant2);
+        var variable3 = Variable3(constant3);
+
+        return (variable0, variable1, variable2, variable3);
+    }
+
 
     // Data access
 
     public int Size { get; } = 4;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 5);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 5)
-            throw new IndexOutOfRangeException();
+		if (i >= 5)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 4)
-            throw new IndexOutOfRangeException();
+		if (i >= 4)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -672,7 +699,7 @@ public class D4Scalar : IScalar
         result.D3 = da * a.D3 + db * b.D3;
         return result;
     }
-
+    
     public static D4Scalar Forward(double constant, double da, double db, double dc, D4Scalar a, D4Scalar b, D4Scalar c)
     {
         var result = new D4Scalar(constant);
@@ -788,7 +815,7 @@ public class D5Scalar : IScalar
         D3 = d3;
         D4 = d4;
     }
-
+    
     public D5Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -839,36 +866,47 @@ public class D5Scalar : IScalar
         return result;
     }
 
+    public (D5Scalar, D5Scalar, D5Scalar, D5Scalar, D5Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+        var variable2 = Variable2(constant2);
+        var variable3 = Variable3(constant3);
+        var variable4 = Variable4(constant4);
+
+        return (variable0, variable1, variable2, variable3, variable4);
+    }
+
 
     // Data access
 
     public int Size { get; } = 5;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 6);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 6)
-            throw new IndexOutOfRangeException();
+		if (i >= 6)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 5)
-            throw new IndexOutOfRangeException();
+		if (i >= 5)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -894,7 +932,7 @@ public class D5Scalar : IScalar
         result.D4 = da * a.D4 + db * b.D4;
         return result;
     }
-
+    
     public static D5Scalar Forward(double constant, double da, double db, double dc, D5Scalar a, D5Scalar b, D5Scalar c)
     {
         var result = new D5Scalar(constant);
@@ -1013,7 +1051,7 @@ public class D6Scalar : IScalar
         D4 = d4;
         D5 = d5;
     }
-
+    
     public D6Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -1073,36 +1111,48 @@ public class D6Scalar : IScalar
         return result;
     }
 
+    public (D6Scalar, D6Scalar, D6Scalar, D6Scalar, D6Scalar, D6Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+        var variable2 = Variable2(constant2);
+        var variable3 = Variable3(constant3);
+        var variable4 = Variable4(constant4);
+        var variable5 = Variable5(constant5);
+
+        return (variable0, variable1, variable2, variable3, variable4, variable5);
+    }
+
 
     // Data access
 
     public int Size { get; } = 6;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 7);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 7)
-            throw new IndexOutOfRangeException();
+		if (i >= 7)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 6)
-            throw new IndexOutOfRangeException();
+		if (i >= 6)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -1130,7 +1180,7 @@ public class D6Scalar : IScalar
         result.D5 = da * a.D5 + db * b.D5;
         return result;
     }
-
+    
     public static D6Scalar Forward(double constant, double da, double db, double dc, D6Scalar a, D6Scalar b, D6Scalar c)
     {
         var result = new D6Scalar(constant);
@@ -1252,7 +1302,7 @@ public class D7Scalar : IScalar
         D5 = d5;
         D6 = d6;
     }
-
+    
     public D7Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -1321,36 +1371,49 @@ public class D7Scalar : IScalar
         return result;
     }
 
+    public (D7Scalar, D7Scalar, D7Scalar, D7Scalar, D7Scalar, D7Scalar, D7Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+        var variable2 = Variable2(constant2);
+        var variable3 = Variable3(constant3);
+        var variable4 = Variable4(constant4);
+        var variable5 = Variable5(constant5);
+        var variable6 = Variable6(constant6);
+
+        return (variable0, variable1, variable2, variable3, variable4, variable5, variable6);
+    }
+
 
     // Data access
 
     public int Size { get; } = 7;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 8);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 8)
-            throw new IndexOutOfRangeException();
+		if (i >= 8)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 7)
-            throw new IndexOutOfRangeException();
+		if (i >= 7)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -1380,7 +1443,7 @@ public class D7Scalar : IScalar
         result.D6 = da * a.D6 + db * b.D6;
         return result;
     }
-
+    
     public static D7Scalar Forward(double constant, double da, double db, double dc, D7Scalar a, D7Scalar b, D7Scalar c)
     {
         var result = new D7Scalar(constant);
@@ -1505,7 +1568,7 @@ public class D8Scalar : IScalar
         D6 = d6;
         D7 = d7;
     }
-
+    
     public D8Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -1583,36 +1646,50 @@ public class D8Scalar : IScalar
         return result;
     }
 
+    public (D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+        var variable2 = Variable2(constant2);
+        var variable3 = Variable3(constant3);
+        var variable4 = Variable4(constant4);
+        var variable5 = Variable5(constant5);
+        var variable6 = Variable6(constant6);
+        var variable7 = Variable7(constant7);
+
+        return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7);
+    }
+
 
     // Data access
 
     public int Size { get; } = 8;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 9);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 9)
-            throw new IndexOutOfRangeException();
+		if (i >= 9)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 8)
-            throw new IndexOutOfRangeException();
+		if (i >= 8)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -1644,7 +1721,7 @@ public class D8Scalar : IScalar
         result.D7 = da * a.D7 + db * b.D7;
         return result;
     }
-
+    
     public static D8Scalar Forward(double constant, double da, double db, double dc, D8Scalar a, D8Scalar b, D8Scalar c)
     {
         var result = new D8Scalar(constant);
@@ -1772,7 +1849,7 @@ public class D9Scalar : IScalar
         D7 = d7;
         D8 = d8;
     }
-
+    
     public D9Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -1859,36 +1936,51 @@ public class D9Scalar : IScalar
         return result;
     }
 
+    public (D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+        var variable2 = Variable2(constant2);
+        var variable3 = Variable3(constant3);
+        var variable4 = Variable4(constant4);
+        var variable5 = Variable5(constant5);
+        var variable6 = Variable6(constant6);
+        var variable7 = Variable7(constant7);
+        var variable8 = Variable8(constant8);
+
+        return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8);
+    }
+
 
     // Data access
 
     public int Size { get; } = 9;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 10);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 10)
-            throw new IndexOutOfRangeException();
+		if (i >= 10)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 9)
-            throw new IndexOutOfRangeException();
+		if (i >= 9)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -1922,7 +2014,7 @@ public class D9Scalar : IScalar
         result.D8 = da * a.D8 + db * b.D8;
         return result;
     }
-
+    
     public static D9Scalar Forward(double constant, double da, double db, double dc, D9Scalar a, D9Scalar b, D9Scalar c)
     {
         var result = new D9Scalar(constant);
@@ -2053,7 +2145,7 @@ public class D10Scalar : IScalar
         D8 = d8;
         D9 = d9;
     }
-
+    
     public D10Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -2149,36 +2241,52 @@ public class D10Scalar : IScalar
         return result;
     }
 
+    public (D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8, double constant9)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+        var variable2 = Variable2(constant2);
+        var variable3 = Variable3(constant3);
+        var variable4 = Variable4(constant4);
+        var variable5 = Variable5(constant5);
+        var variable6 = Variable6(constant6);
+        var variable7 = Variable7(constant7);
+        var variable8 = Variable8(constant8);
+        var variable9 = Variable9(constant9);
+
+        return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9);
+    }
+
 
     // Data access
 
     public int Size { get; } = 10;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 11);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 11)
-            throw new IndexOutOfRangeException();
+		if (i >= 11)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 10)
-            throw new IndexOutOfRangeException();
+		if (i >= 10)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -2214,7 +2322,7 @@ public class D10Scalar : IScalar
         result.D9 = da * a.D9 + db * b.D9;
         return result;
     }
-
+    
     public static D10Scalar Forward(double constant, double da, double db, double dc, D10Scalar a, D10Scalar b, D10Scalar c)
     {
         var result = new D10Scalar(constant);
@@ -2348,7 +2456,7 @@ public class D11Scalar : IScalar
         D9 = d9;
         D10 = d10;
     }
-
+    
     public D11Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -2453,36 +2561,53 @@ public class D11Scalar : IScalar
         return result;
     }
 
+    public (D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8, double constant9, double constant10)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+        var variable2 = Variable2(constant2);
+        var variable3 = Variable3(constant3);
+        var variable4 = Variable4(constant4);
+        var variable5 = Variable5(constant5);
+        var variable6 = Variable6(constant6);
+        var variable7 = Variable7(constant7);
+        var variable8 = Variable8(constant8);
+        var variable9 = Variable9(constant9);
+        var variable10 = Variable10(constant10);
+
+        return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10);
+    }
+
 
     // Data access
 
     public int Size { get; } = 11;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 12);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 12)
-            throw new IndexOutOfRangeException();
+		if (i >= 12)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 11)
-            throw new IndexOutOfRangeException();
+		if (i >= 11)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -2520,7 +2645,7 @@ public class D11Scalar : IScalar
         result.D10 = da * a.D10 + db * b.D10;
         return result;
     }
-
+    
     public static D11Scalar Forward(double constant, double da, double db, double dc, D11Scalar a, D11Scalar b, D11Scalar c)
     {
         var result = new D11Scalar(constant);
@@ -2657,7 +2782,7 @@ public class D12Scalar : IScalar
         D10 = d10;
         D11 = d11;
     }
-
+    
     public D12Scalar(ReadOnlySpan<double> data)
     {
         Constant = data[0];
@@ -2771,36 +2896,54 @@ public class D12Scalar : IScalar
         return result;
     }
 
+    public (D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8, double constant9, double constant10, double constant11)
+    {
+        var variable0 = Variable0(constant0);
+        var variable1 = Variable1(constant1);
+        var variable2 = Variable2(constant2);
+        var variable3 = Variable3(constant3);
+        var variable4 = Variable4(constant4);
+        var variable5 = Variable5(constant5);
+        var variable6 = Variable6(constant6);
+        var variable7 = Variable7(constant7);
+        var variable8 = Variable8(constant8);
+        var variable9 = Variable9(constant9);
+        var variable10 = Variable10(constant10);
+        var variable11 = Variable11(constant11);
+
+        return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10, variable11);
+    }
+
 
     // Data access
 
     public int Size { get; } = 12;
-
+    
     unsafe public Span<double> Data()
     {
         var ptr = Unsafe.AsPointer(ref Constant);
         return new Span<double>(ptr, 13);
     }
-
+    
     public double[] ToArray()
     {
         return Data().ToArray();
     }
-
+    
     public ref double Data(int i)
     {
-        if (i >= 13)
-            throw new IndexOutOfRangeException();
+		if (i >= 13)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref Constant, i);
+		return ref Unsafe.Add(ref Constant, i);
     }
 
     public ref double D(int i)
     {
-        if (i >= 12)
-            throw new IndexOutOfRangeException();
+		if (i >= 12)
+			throw new IndexOutOfRangeException();
 
-        return ref Unsafe.Add(ref D0, i);
+		return ref Unsafe.Add(ref D0, i);
     }
 
     // Transformations
@@ -2840,7 +2983,7 @@ public class D12Scalar : IScalar
         result.D11 = da * a.D11 + db * b.D11;
         return result;
     }
-
+    
     public static D12Scalar Forward(double constant, double da, double db, double dc, D12Scalar a, D12Scalar b, D12Scalar c)
     {
         var result = new D12Scalar(constant);

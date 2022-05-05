@@ -129,7 +129,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -142,7 +142,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -155,7 +155,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -168,7 +168,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -181,7 +181,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -194,7 +194,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -207,7 +207,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -220,7 +220,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -233,7 +233,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -246,7 +246,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -259,7 +259,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;
@@ -272,7 +272,7 @@ public static partial class MathD
         // > 2 times faster when precomputing these values
         var tmp1 = Math.Pow(a.Constant, b - 2);
         var tmp2 = tmp1 * a.Constant;
-
+        
         var constant = tmp2 * a.Constant;
         var da = b * tmp2;
         var dada = b * (b - 1) * tmp1;

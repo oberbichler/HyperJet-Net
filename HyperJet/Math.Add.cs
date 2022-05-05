@@ -1,6 +1,9 @@
 ﻿#pragma warning disable IDE0017
 
 namespace HyperJet;
+
+using System;
+
 public static partial class MathD
 {
     public static D1Scalar Add(double a, D1Scalar b)

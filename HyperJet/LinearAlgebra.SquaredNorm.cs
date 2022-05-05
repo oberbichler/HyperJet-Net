@@ -1,4 +1,7 @@
 ﻿namespace HyperJet;
+
+using System;
+
 public static partial class LinearAlgebraD
 {
     public static D1Scalar SquaredNorm(D1Vector3 v)

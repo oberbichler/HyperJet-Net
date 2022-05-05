@@ -1,4 +1,7 @@
 ﻿namespace HyperJet;
+
+using System;
+
 public static partial class LinearAlgebraD
 {
     public static D1Scalar Dot(D1Vector3 u, D1Vector3 v)
@@ -14,7 +17,7 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
 
         return result;
     }
@@ -32,8 +35,8 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
 
         return result;
     }
@@ -51,9 +54,9 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
 
         return result;
     }
@@ -71,10 +74,10 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
 
         return result;
     }
@@ -92,11 +95,11 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
 
         return result;
     }
@@ -114,12 +117,12 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
 
         return result;
     }
@@ -137,13 +140,13 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
 
         return result;
     }
@@ -161,14 +164,14 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
-        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4 * v.Y.D7 + d5 * v.Z.D7;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
+        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4* v.Y.D7 + d5 * v.Z.D7;
 
         return result;
     }
@@ -186,15 +189,15 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
-        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4 * v.Y.D7 + d5 * v.Z.D7;
-        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4 * v.Y.D8 + d5 * v.Z.D8;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
+        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4* v.Y.D7 + d5 * v.Z.D7;
+        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4* v.Y.D8 + d5 * v.Z.D8;
 
         return result;
     }
@@ -212,16 +215,16 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
-        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4 * v.Y.D7 + d5 * v.Z.D7;
-        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4 * v.Y.D8 + d5 * v.Z.D8;
-        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4 * v.Y.D9 + d5 * v.Z.D9;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
+        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4* v.Y.D7 + d5 * v.Z.D7;
+        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4* v.Y.D8 + d5 * v.Z.D8;
+        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4* v.Y.D9 + d5 * v.Z.D9;
 
         return result;
     }
@@ -239,17 +242,17 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
-        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4 * v.Y.D7 + d5 * v.Z.D7;
-        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4 * v.Y.D8 + d5 * v.Z.D8;
-        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4 * v.Y.D9 + d5 * v.Z.D9;
-        result.D10 = d0 * u.X.D10 + d1 * u.Y.D10 + d2 * u.Z.D10 + d3 * v.X.D10 + d4 * v.Y.D10 + d5 * v.Z.D10;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
+        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4* v.Y.D7 + d5 * v.Z.D7;
+        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4* v.Y.D8 + d5 * v.Z.D8;
+        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4* v.Y.D9 + d5 * v.Z.D9;
+        result.D10 = d0 * u.X.D10 + d1 * u.Y.D10 + d2 * u.Z.D10 + d3 * v.X.D10 + d4* v.Y.D10 + d5 * v.Z.D10;
 
         return result;
     }
@@ -267,18 +270,18 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
-        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4 * v.Y.D7 + d5 * v.Z.D7;
-        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4 * v.Y.D8 + d5 * v.Z.D8;
-        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4 * v.Y.D9 + d5 * v.Z.D9;
-        result.D10 = d0 * u.X.D10 + d1 * u.Y.D10 + d2 * u.Z.D10 + d3 * v.X.D10 + d4 * v.Y.D10 + d5 * v.Z.D10;
-        result.D11 = d0 * u.X.D11 + d1 * u.Y.D11 + d2 * u.Z.D11 + d3 * v.X.D11 + d4 * v.Y.D11 + d5 * v.Z.D11;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
+        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4* v.Y.D7 + d5 * v.Z.D7;
+        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4* v.Y.D8 + d5 * v.Z.D8;
+        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4* v.Y.D9 + d5 * v.Z.D9;
+        result.D10 = d0 * u.X.D10 + d1 * u.Y.D10 + d2 * u.Z.D10 + d3 * v.X.D10 + d4* v.Y.D10 + d5 * v.Z.D10;
+        result.D11 = d0 * u.X.D11 + d1 * u.Y.D11 + d2 * u.Z.D11 + d3 * v.X.D11 + d4* v.Y.D11 + d5 * v.Z.D11;
 
         return result;
     }
@@ -296,7 +299,7 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
 
@@ -316,8 +319,8 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
@@ -339,9 +342,9 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
@@ -366,10 +369,10 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
@@ -398,11 +401,11 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
@@ -436,12 +439,12 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
@@ -481,13 +484,13 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
@@ -534,14 +537,14 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
-        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4 * v.Y.D7 + d5 * v.Z.D7;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
+        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4* v.Y.D7 + d5 * v.Z.D7;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
@@ -596,15 +599,15 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
-        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4 * v.Y.D7 + d5 * v.Z.D7;
-        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4 * v.Y.D8 + d5 * v.Z.D8;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
+        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4* v.Y.D7 + d5 * v.Z.D7;
+        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4* v.Y.D8 + d5 * v.Z.D8;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
@@ -668,16 +671,16 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
-        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4 * v.Y.D7 + d5 * v.Z.D7;
-        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4 * v.Y.D8 + d5 * v.Z.D8;
-        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4 * v.Y.D9 + d5 * v.Z.D9;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
+        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4* v.Y.D7 + d5 * v.Z.D7;
+        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4* v.Y.D8 + d5 * v.Z.D8;
+        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4* v.Y.D9 + d5 * v.Z.D9;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
@@ -751,17 +754,17 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
-        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4 * v.Y.D7 + d5 * v.Z.D7;
-        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4 * v.Y.D8 + d5 * v.Z.D8;
-        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4 * v.Y.D9 + d5 * v.Z.D9;
-        result.D10 = d0 * u.X.D10 + d1 * u.Y.D10 + d2 * u.Z.D10 + d3 * v.X.D10 + d4 * v.Y.D10 + d5 * v.Z.D10;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
+        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4* v.Y.D7 + d5 * v.Z.D7;
+        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4* v.Y.D8 + d5 * v.Z.D8;
+        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4* v.Y.D9 + d5 * v.Z.D9;
+        result.D10 = d0 * u.X.D10 + d1 * u.Y.D10 + d2 * u.Z.D10 + d3 * v.X.D10 + d4* v.Y.D10 + d5 * v.Z.D10;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
@@ -846,18 +849,18 @@ public static partial class LinearAlgebraD
         var d4 = u.Y.Constant;
         var d5 = u.Z.Constant;
 
-        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4 * v.Y.D0 + d5 * v.Z.D0;
-        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4 * v.Y.D1 + d5 * v.Z.D1;
-        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4 * v.Y.D2 + d5 * v.Z.D2;
-        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4 * v.Y.D3 + d5 * v.Z.D3;
-        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4 * v.Y.D4 + d5 * v.Z.D4;
-        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4 * v.Y.D5 + d5 * v.Z.D5;
-        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4 * v.Y.D6 + d5 * v.Z.D6;
-        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4 * v.Y.D7 + d5 * v.Z.D7;
-        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4 * v.Y.D8 + d5 * v.Z.D8;
-        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4 * v.Y.D9 + d5 * v.Z.D9;
-        result.D10 = d0 * u.X.D10 + d1 * u.Y.D10 + d2 * u.Z.D10 + d3 * v.X.D10 + d4 * v.Y.D10 + d5 * v.Z.D10;
-        result.D11 = d0 * u.X.D11 + d1 * u.Y.D11 + d2 * u.Z.D11 + d3 * v.X.D11 + d4 * v.Y.D11 + d5 * v.Z.D11;
+        result.D0 = d0 * u.X.D0 + d1 * u.Y.D0 + d2 * u.Z.D0 + d3 * v.X.D0 + d4* v.Y.D0 + d5 * v.Z.D0;
+        result.D1 = d0 * u.X.D1 + d1 * u.Y.D1 + d2 * u.Z.D1 + d3 * v.X.D1 + d4* v.Y.D1 + d5 * v.Z.D1;
+        result.D2 = d0 * u.X.D2 + d1 * u.Y.D2 + d2 * u.Z.D2 + d3 * v.X.D2 + d4* v.Y.D2 + d5 * v.Z.D2;
+        result.D3 = d0 * u.X.D3 + d1 * u.Y.D3 + d2 * u.Z.D3 + d3 * v.X.D3 + d4* v.Y.D3 + d5 * v.Z.D3;
+        result.D4 = d0 * u.X.D4 + d1 * u.Y.D4 + d2 * u.Z.D4 + d3 * v.X.D4 + d4* v.Y.D4 + d5 * v.Z.D4;
+        result.D5 = d0 * u.X.D5 + d1 * u.Y.D5 + d2 * u.Z.D5 + d3 * v.X.D5 + d4* v.Y.D5 + d5 * v.Z.D5;
+        result.D6 = d0 * u.X.D6 + d1 * u.Y.D6 + d2 * u.Z.D6 + d3 * v.X.D6 + d4* v.Y.D6 + d5 * v.Z.D6;
+        result.D7 = d0 * u.X.D7 + d1 * u.Y.D7 + d2 * u.Z.D7 + d3 * v.X.D7 + d4* v.Y.D7 + d5 * v.Z.D7;
+        result.D8 = d0 * u.X.D8 + d1 * u.Y.D8 + d2 * u.Z.D8 + d3 * v.X.D8 + d4* v.Y.D8 + d5 * v.Z.D8;
+        result.D9 = d0 * u.X.D9 + d1 * u.Y.D9 + d2 * u.Z.D9 + d3 * v.X.D9 + d4* v.Y.D9 + d5 * v.Z.D9;
+        result.D10 = d0 * u.X.D10 + d1 * u.Y.D10 + d2 * u.Z.D10 + d3 * v.X.D10 + d4* v.Y.D10 + d5 * v.Z.D10;
+        result.D11 = d0 * u.X.D11 + d1 * u.Y.D11 + d2 * u.Z.D11 + d3 * v.X.D11 + d4* v.Y.D11 + d5 * v.Z.D11;
 
         result.D0D0 = d0 * u.X.D0D0 + d1 * u.Y.D0D0 + d2 * u.Z.D0D0 + d3 * v.X.D0D0 + d4 * v.Y.D0D0 + d5 * v.Z.D0D0 + v.X.D0 * u.X.D0 + v.Y.D0 * u.Y.D0 + v.Z.D0 * u.Z.D0 + u.X.D0 * v.X.D0 + u.Y.D0 * v.Y.D0 + u.Z.D0 * v.Z.D0;
         result.D0D1 = d0 * u.X.D0D1 + d1 * u.Y.D0D1 + d2 * u.Z.D0D1 + d3 * v.X.D0D1 + d4 * v.Y.D0D1 + d5 * v.Z.D0D1 + v.X.D0 * u.X.D1 + v.Y.D0 * u.Y.D1 + v.Z.D0 * u.Z.D1 + u.X.D0 * v.X.D1 + u.Y.D0 * v.Y.D1 + u.Z.D0 * v.Z.D1;
