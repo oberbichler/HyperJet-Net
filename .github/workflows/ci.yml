@@ -1,0 +1,48 @@
+name: .NET
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types:
+    - published
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore
+
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Publish
+      run: |
+        if ($env:TAG_NAME -ne $null) {
+          $Version = $([Regex]::Matches($env:TAG_NAME, "v(\d+(?:\.\d+)+(?:-\w+)?)").groups | Where-Object Name -eq 1).value
+        } else {
+          $Version = "0.0.0"
+        }
+        Write-Output "Version: $Version"
+        dotnet pack -p:PackageVersion=$Version -p:Version=$Version
+
+    - name: Pack
+      run: |
+        dotnet nuget push ".\HyperJet\bin\*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source https://api.nuget.org/v3/index.json
+      if: github.event_name == 'release' && github.event.action == 'published'
