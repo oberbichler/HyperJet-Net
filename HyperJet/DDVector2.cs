@@ -15,6 +15,14 @@ public struct DD1Vector2
         Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
+    public DD1Vector2((DD1Scalar, DD1Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+    }
+
     // Data access
 
     public DD1Scalar this[int index] => index switch
@@ -93,6 +101,14 @@ public struct DD2Vector2
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
+    }
+
+    public DD2Vector2((DD2Scalar, DD2Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
     }
 
     // Data access
@@ -175,6 +191,14 @@ public struct DD3Vector2
         Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
+    public DD3Vector2((DD3Scalar, DD3Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+    }
+
     // Data access
 
     public DD3Scalar this[int index] => index switch
@@ -253,6 +277,14 @@ public struct DD4Vector2
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
+    }
+
+    public DD4Vector2((DD4Scalar, DD4Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
     }
 
     // Data access
@@ -335,6 +367,14 @@ public struct DD5Vector2
         Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
+    public DD5Vector2((DD5Scalar, DD5Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+    }
+
     // Data access
 
     public DD5Scalar this[int index] => index switch
@@ -413,6 +453,14 @@ public struct DD6Vector2
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
+    }
+
+    public DD6Vector2((DD6Scalar, DD6Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
     }
 
     // Data access
@@ -495,6 +543,14 @@ public struct DD7Vector2
         Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
+    public DD7Vector2((DD7Scalar, DD7Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+    }
+
     // Data access
 
     public DD7Scalar this[int index] => index switch
@@ -573,6 +629,14 @@ public struct DD8Vector2
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
+    }
+
+    public DD8Vector2((DD8Scalar, DD8Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
     }
 
     // Data access
@@ -655,6 +719,14 @@ public struct DD9Vector2
         Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
+    public DD9Vector2((DD9Scalar, DD9Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+    }
+
     // Data access
 
     public DD9Scalar this[int index] => index switch
@@ -733,6 +805,14 @@ public struct DD10Vector2
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
+    }
+
+    public DD10Vector2((DD10Scalar, DD10Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
     }
 
     // Data access
@@ -815,6 +895,14 @@ public struct DD11Vector2
         Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
+    public DD11Vector2((DD11Scalar, DD11Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+    }
+
     // Data access
 
     public DD11Scalar this[int index] => index switch
@@ -893,6 +981,14 @@ public struct DD12Vector2
     {
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
+    }
+
+    public DD12Vector2((DD12Scalar, DD12Scalar) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
     }
 
     // Data access

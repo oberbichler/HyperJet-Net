@@ -17,6 +17,15 @@ public struct D1Vector3
         Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
+    public D1Vector3((D1Scalar, D1Scalar, D1Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
+    }
+
     // Data access
 
     public D1Scalar this[int index] => index switch
@@ -104,6 +113,15 @@ public struct D2Vector3
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
         Z = z ?? throw new ArgumentNullException(nameof(z));
+    }
+
+    public D2Vector3((D2Scalar, D2Scalar, D2Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
     }
 
     // Data access
@@ -195,6 +213,15 @@ public struct D3Vector3
         Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
+    public D3Vector3((D3Scalar, D3Scalar, D3Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
+    }
+
     // Data access
 
     public D3Scalar this[int index] => index switch
@@ -282,6 +309,15 @@ public struct D4Vector3
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
         Z = z ?? throw new ArgumentNullException(nameof(z));
+    }
+
+    public D4Vector3((D4Scalar, D4Scalar, D4Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
     }
 
     // Data access
@@ -373,6 +409,15 @@ public struct D5Vector3
         Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
+    public D5Vector3((D5Scalar, D5Scalar, D5Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
+    }
+
     // Data access
 
     public D5Scalar this[int index] => index switch
@@ -460,6 +505,15 @@ public struct D6Vector3
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
         Z = z ?? throw new ArgumentNullException(nameof(z));
+    }
+
+    public D6Vector3((D6Scalar, D6Scalar, D6Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
     }
 
     // Data access
@@ -551,6 +605,15 @@ public struct D7Vector3
         Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
+    public D7Vector3((D7Scalar, D7Scalar, D7Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
+    }
+
     // Data access
 
     public D7Scalar this[int index] => index switch
@@ -638,6 +701,15 @@ public struct D8Vector3
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
         Z = z ?? throw new ArgumentNullException(nameof(z));
+    }
+
+    public D8Vector3((D8Scalar, D8Scalar, D8Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
     }
 
     // Data access
@@ -729,6 +801,15 @@ public struct D9Vector3
         Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
+    public D9Vector3((D9Scalar, D9Scalar, D9Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
+    }
+
     // Data access
 
     public D9Scalar this[int index] => index switch
@@ -816,6 +897,15 @@ public struct D10Vector3
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
         Z = z ?? throw new ArgumentNullException(nameof(z));
+    }
+
+    public D10Vector3((D10Scalar, D10Scalar, D10Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
     }
 
     // Data access
@@ -907,6 +997,15 @@ public struct D11Vector3
         Z = z ?? throw new ArgumentNullException(nameof(z));
     }
 
+    public D11Vector3((D11Scalar, D11Scalar, D11Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
+    }
+
     // Data access
 
     public D11Scalar this[int index] => index switch
@@ -994,6 +1093,15 @@ public struct D12Vector3
         X = x ?? throw new ArgumentNullException(nameof(x));
         Y = y ?? throw new ArgumentNullException(nameof(y));
         Z = z ?? throw new ArgumentNullException(nameof(z));
+    }
+
+    public D12Vector3((D12Scalar, D12Scalar, D12Scalar) xyz)
+    {
+        var (x, y, z) = xyz;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+        Z = z ?? throw new NullReferenceException(nameof(z));
     }
 
     // Data access

@@ -28,6 +28,14 @@ public struct <#= vector #>
         Y = y ?? throw new ArgumentNullException(nameof(y));
     }
 
+    public <#= vector #>((<#= scalar #>, <#= scalar #>) xy)
+    {
+        var (x, y) = xy;
+
+        X = x ?? throw new NullReferenceException(nameof(x));
+        Y = y ?? throw new NullReferenceException(nameof(y));
+    }
+
     // Data access
 
     public <#= scalar #> this[int index] => index switch
