@@ -115,7 +115,7 @@ else
 <#
     }
 #>
-    public (<#= scalar #><# for (var i = 1; i < size; i++) { #>, <#= scalar #><# } #>) Variables(double constant0<# for (var i = 1; i < size; i++) { #>, double constant<#= i #><# } #>)
+    public static (<#= scalar #><# for (var i = 1; i < size; i++) { #>, <#= scalar #><# } #>) Variables(double constant0<# for (var i = 1; i < size; i++) { #>, double constant<#= i #><# } #>)
     {
 <#
 for (var i = 0; i < size; i++)

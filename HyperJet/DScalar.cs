@@ -225,7 +225,7 @@ public class D2Scalar : IScalar
         return result;
     }
 
-    public (D2Scalar, D2Scalar) Variables(double constant0, double constant1)
+    public static (D2Scalar, D2Scalar) Variables(double constant0, double constant1)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
@@ -429,7 +429,7 @@ public class D3Scalar : IScalar
         return result;
     }
 
-    public (D3Scalar, D3Scalar, D3Scalar) Variables(double constant0, double constant1, double constant2)
+    public static (D3Scalar, D3Scalar, D3Scalar) Variables(double constant0, double constant1, double constant2)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
@@ -648,7 +648,7 @@ public class D4Scalar : IScalar
         return result;
     }
 
-    public (D4Scalar, D4Scalar, D4Scalar, D4Scalar) Variables(double constant0, double constant1, double constant2, double constant3)
+    public static (D4Scalar, D4Scalar, D4Scalar, D4Scalar) Variables(double constant0, double constant1, double constant2, double constant3)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
@@ -882,7 +882,7 @@ public class D5Scalar : IScalar
         return result;
     }
 
-    public (D5Scalar, D5Scalar, D5Scalar, D5Scalar, D5Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4)
+    public static (D5Scalar, D5Scalar, D5Scalar, D5Scalar, D5Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
@@ -1131,7 +1131,7 @@ public class D6Scalar : IScalar
         return result;
     }
 
-    public (D6Scalar, D6Scalar, D6Scalar, D6Scalar, D6Scalar, D6Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5)
+    public static (D6Scalar, D6Scalar, D6Scalar, D6Scalar, D6Scalar, D6Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
@@ -1395,7 +1395,7 @@ public class D7Scalar : IScalar
         return result;
     }
 
-    public (D7Scalar, D7Scalar, D7Scalar, D7Scalar, D7Scalar, D7Scalar, D7Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6)
+    public static (D7Scalar, D7Scalar, D7Scalar, D7Scalar, D7Scalar, D7Scalar, D7Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
@@ -1674,7 +1674,7 @@ public class D8Scalar : IScalar
         return result;
     }
 
-    public (D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7)
+    public static (D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar, D8Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
@@ -1968,7 +1968,7 @@ public class D9Scalar : IScalar
         return result;
     }
 
-    public (D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8)
+    public static (D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar, D9Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
@@ -2277,7 +2277,7 @@ public class D10Scalar : IScalar
         return result;
     }
 
-    public (D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8, double constant9)
+    public static (D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar, D10Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8, double constant9)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
@@ -2601,7 +2601,7 @@ public class D11Scalar : IScalar
         return result;
     }
 
-    public (D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8, double constant9, double constant10)
+    public static (D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar, D11Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8, double constant9, double constant10)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
@@ -2940,7 +2940,7 @@ public class D12Scalar : IScalar
         return result;
     }
 
-    public (D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8, double constant9, double constant10, double constant11)
+    public static (D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar, D12Scalar) Variables(double constant0, double constant1, double constant2, double constant3, double constant4, double constant5, double constant6, double constant7, double constant8, double constant9, double constant10, double constant11)
     {
         var variable0 = Variable0(constant0);
         var variable1 = Variable1(constant1);
