@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD1Scalar : IScalar
+public class DD1Scalar : IScalar, IEquatable<DD1Scalar>, IComparable<DD1Scalar>
 {
     public double Constant;
     public double D0;
@@ -113,6 +113,26 @@ public class DD1Scalar : IScalar
 			return false;
 
 		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD1Scalar);
+	}
+
+	public bool Equals(DD1Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD1Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
 	}
 
     // Data access
@@ -301,7 +321,7 @@ public class DD1Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD2Scalar : IScalar
+public class DD2Scalar : IScalar, IEquatable<DD2Scalar>, IComparable<DD2Scalar>
 {
     public double Constant;
     public double D0;
@@ -437,6 +457,26 @@ public class DD2Scalar : IScalar
 			return false;
 
 		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD2Scalar);
+	}
+
+	public bool Equals(DD2Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD2Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
 	}
 
     // Data access
@@ -640,7 +680,7 @@ public class DD2Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD3Scalar : IScalar
+public class DD3Scalar : IScalar, IEquatable<DD3Scalar>, IComparable<DD3Scalar>
 {
     public double Constant;
     public double D0;
@@ -806,6 +846,26 @@ public class DD3Scalar : IScalar
 			return false;
 
 		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD3Scalar);
+	}
+
+	public bool Equals(DD3Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD3Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
 	}
 
     // Data access
@@ -1027,7 +1087,7 @@ public class DD3Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD4Scalar : IScalar
+public class DD4Scalar : IScalar, IEquatable<DD4Scalar>, IComparable<DD4Scalar>
 {
     public double Constant;
     public double D0;
@@ -1228,6 +1288,26 @@ public class DD4Scalar : IScalar
 			return false;
 
 		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD4Scalar);
+	}
+
+	public bool Equals(DD4Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD4Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
 	}
 
     // Data access
@@ -1470,7 +1550,7 @@ public class DD4Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD5Scalar : IScalar
+public class DD5Scalar : IScalar, IEquatable<DD5Scalar>, IComparable<DD5Scalar>
 {
     public double Constant;
     public double D0;
@@ -1711,6 +1791,26 @@ public class DD5Scalar : IScalar
 			return false;
 
 		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD5Scalar);
+	}
+
+	public bool Equals(DD5Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD5Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
 	}
 
     // Data access
@@ -1977,7 +2077,7 @@ public class DD5Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD6Scalar : IScalar
+public class DD6Scalar : IScalar, IEquatable<DD6Scalar>, IComparable<DD6Scalar>
 {
     public double Constant;
     public double D0;
@@ -2263,6 +2363,26 @@ public class DD6Scalar : IScalar
 			return false;
 
 		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD6Scalar);
+	}
+
+	public bool Equals(DD6Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD6Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
 	}
 
     // Data access
@@ -2556,7 +2676,7 @@ public class DD6Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD7Scalar : IScalar
+public class DD7Scalar : IScalar, IEquatable<DD7Scalar>, IComparable<DD7Scalar>
 {
     public double Constant;
     public double D0;
@@ -2893,6 +3013,26 @@ public class DD7Scalar : IScalar
 
 		return lhs.Constant <= rhs.Constant;
 	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD7Scalar);
+	}
+
+	public bool Equals(DD7Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD7Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -3215,7 +3355,7 @@ public class DD7Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD8Scalar : IScalar
+public class DD8Scalar : IScalar, IEquatable<DD8Scalar>, IComparable<DD8Scalar>
 {
     public double Constant;
     public double D0;
@@ -3607,6 +3747,26 @@ public class DD8Scalar : IScalar
 
 		return lhs.Constant <= rhs.Constant;
 	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD8Scalar);
+	}
+
+	public bool Equals(DD8Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD8Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -3962,7 +4122,7 @@ public class DD8Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD9Scalar : IScalar
+public class DD9Scalar : IScalar, IEquatable<DD9Scalar>, IComparable<DD9Scalar>
 {
     public double Constant;
     public double D0;
@@ -4414,6 +4574,26 @@ public class DD9Scalar : IScalar
 
 		return lhs.Constant <= rhs.Constant;
 	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD9Scalar);
+	}
+
+	public bool Equals(DD9Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD9Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -4805,7 +4985,7 @@ public class DD9Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD10Scalar : IScalar
+public class DD10Scalar : IScalar, IEquatable<DD10Scalar>, IComparable<DD10Scalar>
 {
     public double Constant;
     public double D0;
@@ -5322,6 +5502,26 @@ public class DD10Scalar : IScalar
 
 		return lhs.Constant <= rhs.Constant;
 	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD10Scalar);
+	}
+
+	public bool Equals(DD10Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD10Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -5752,7 +5952,7 @@ public class DD10Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD11Scalar : IScalar
+public class DD11Scalar : IScalar, IEquatable<DD11Scalar>, IComparable<DD11Scalar>
 {
     public double Constant;
     public double D0;
@@ -6339,6 +6539,26 @@ public class DD11Scalar : IScalar
 
 		return lhs.Constant <= rhs.Constant;
 	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD11Scalar);
+	}
+
+	public bool Equals(DD11Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD11Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -6811,7 +7031,7 @@ public class DD11Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD12Scalar : IScalar
+public class DD12Scalar : IScalar, IEquatable<DD12Scalar>, IComparable<DD12Scalar>
 {
     public double Constant;
     public double D0;
@@ -7472,6 +7692,26 @@ public class DD12Scalar : IScalar
 			return false;
 
 		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD12Scalar);
+	}
+
+	public bool Equals(DD12Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD12Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
 	}
 
     // Data access

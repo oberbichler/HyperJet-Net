@@ -22,7 +22,7 @@ for (var size = 1; size <= 12; size++)
 #>
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class <#= scalar #> : IScalar
+public class <#= scalar #> : IScalar, IEquatable<<#= scalar #>>, IComparable<<#= scalar #>>
 {
     public double Constant;
 <# for (var i = 0; i < size; i++) { #>
@@ -205,6 +205,26 @@ for (var i = 0; i < size; i++)
 			return false;
 
 		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as <#= scalar #>);
+	}
+
+	public bool Equals(<#= scalar #> other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(<#= scalar #> other)
+	{
+		return Constant.CompareTo(other.Constant);
 	}
 
     // Data access
