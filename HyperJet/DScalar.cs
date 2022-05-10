@@ -56,6 +56,54 @@ public class D1Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D1Scalar lhs, D1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D1Scalar lhs, D1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D1Scalar lhs, D1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D1Scalar lhs, D1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D1Scalar lhs, D1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D1Scalar lhs, D1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -256,6 +304,54 @@ public class D2Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D2Scalar lhs, D2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D2Scalar lhs, D2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D2Scalar lhs, D2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D2Scalar lhs, D2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D2Scalar lhs, D2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D2Scalar lhs, D2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -472,6 +568,54 @@ public class D3Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D3Scalar lhs, D3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D3Scalar lhs, D3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D3Scalar lhs, D3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D3Scalar lhs, D3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D3Scalar lhs, D3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D3Scalar lhs, D3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -704,6 +848,54 @@ public class D4Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D4Scalar lhs, D4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D4Scalar lhs, D4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D4Scalar lhs, D4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D4Scalar lhs, D4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D4Scalar lhs, D4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D4Scalar lhs, D4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -952,6 +1144,54 @@ public class D5Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D5Scalar lhs, D5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D5Scalar lhs, D5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D5Scalar lhs, D5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D5Scalar lhs, D5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D5Scalar lhs, D5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D5Scalar lhs, D5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -1216,6 +1456,54 @@ public class D6Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D6Scalar lhs, D6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D6Scalar lhs, D6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D6Scalar lhs, D6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D6Scalar lhs, D6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D6Scalar lhs, D6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D6Scalar lhs, D6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -1496,6 +1784,54 @@ public class D7Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D7Scalar lhs, D7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D7Scalar lhs, D7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D7Scalar lhs, D7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D7Scalar lhs, D7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D7Scalar lhs, D7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D7Scalar lhs, D7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -1792,6 +2128,54 @@ public class D8Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D8Scalar lhs, D8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D8Scalar lhs, D8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D8Scalar lhs, D8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D8Scalar lhs, D8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D8Scalar lhs, D8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D8Scalar lhs, D8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -2104,6 +2488,54 @@ public class D9Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D9Scalar lhs, D9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D9Scalar lhs, D9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D9Scalar lhs, D9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D9Scalar lhs, D9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D9Scalar lhs, D9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D9Scalar lhs, D9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -2432,6 +2864,54 @@ public class D10Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D10Scalar lhs, D10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D10Scalar lhs, D10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D10Scalar lhs, D10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D10Scalar lhs, D10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D10Scalar lhs, D10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D10Scalar lhs, D10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -2776,6 +3256,54 @@ public class D11Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D11Scalar lhs, D11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D11Scalar lhs, D11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D11Scalar lhs, D11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D11Scalar lhs, D11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D11Scalar lhs, D11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D11Scalar lhs, D11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
@@ -3136,6 +3664,54 @@ public class D12Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(D12Scalar lhs, D12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(D12Scalar lhs, D12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(D12Scalar lhs, D12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(D12Scalar lhs, D12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(D12Scalar lhs, D12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(D12Scalar lhs, D12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 

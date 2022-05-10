@@ -131,6 +131,54 @@ for (var i = 0; i < size; i++)
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(<#= scalar #> lhs, <#= scalar #> rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(<#= scalar #> lhs, <#= scalar #> rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(<#= scalar #> lhs, <#= scalar #> rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(<#= scalar #> lhs, <#= scalar #> rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(<#= scalar #> lhs, <#= scalar #> rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(<#= scalar #> lhs, <#= scalar #> rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
 
     // Data access
 
