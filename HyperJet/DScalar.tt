@@ -116,6 +116,17 @@ for (var i = 0; i < size; i++)
 <#
 }
 #>
+    public double Evaluate(double d0<# for (var i = 1; i < size; i++) { #>, double d<#= i #><# } #>)
+    {
+        var result = Constant;
+
+<# for (var i = 0; i < size; i++) { #>
+        result += D<#= i #> * d<#= i #>;
+<# } #>
+
+        return result;
+    }
+
     public override string ToString()
     {
         return $"{Constant}hj";

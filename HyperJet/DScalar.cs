@@ -43,6 +43,15 @@ public class D1Scalar : IScalar
         return result;
     }
 
+    public double Evaluate(double d0)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+
+        return result;
+    }
+
     public override string ToString()
     {
         return $"{Constant}hj";
@@ -231,6 +240,16 @@ public class D2Scalar : IScalar
         var variable1 = Variable1(constant1);
 
         return (variable0, variable1);
+    }
+
+    public double Evaluate(double d0, double d1)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+
+        return result;
     }
 
     public override string ToString()
@@ -436,6 +455,17 @@ public class D3Scalar : IScalar
         var variable2 = Variable2(constant2);
 
         return (variable0, variable1, variable2);
+    }
+
+    public double Evaluate(double d0, double d1, double d2)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+
+        return result;
     }
 
     public override string ToString()
@@ -656,6 +686,18 @@ public class D4Scalar : IScalar
         var variable3 = Variable3(constant3);
 
         return (variable0, variable1, variable2, variable3);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+
+        return result;
     }
 
     public override string ToString()
@@ -891,6 +933,19 @@ public class D5Scalar : IScalar
         var variable4 = Variable4(constant4);
 
         return (variable0, variable1, variable2, variable3, variable4);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+
+        return result;
     }
 
     public override string ToString()
@@ -1141,6 +1196,20 @@ public class D6Scalar : IScalar
         var variable5 = Variable5(constant5);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+
+        return result;
     }
 
     public override string ToString()
@@ -1406,6 +1475,21 @@ public class D7Scalar : IScalar
         var variable6 = Variable6(constant6);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+
+        return result;
     }
 
     public override string ToString()
@@ -1686,6 +1770,22 @@ public class D8Scalar : IScalar
         var variable7 = Variable7(constant7);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+        result += D7 * d7;
+
+        return result;
     }
 
     public override string ToString()
@@ -1981,6 +2081,23 @@ public class D9Scalar : IScalar
         var variable8 = Variable8(constant8);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+        result += D7 * d7;
+        result += D8 * d8;
+
+        return result;
     }
 
     public override string ToString()
@@ -2291,6 +2408,24 @@ public class D10Scalar : IScalar
         var variable9 = Variable9(constant9);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+        result += D7 * d7;
+        result += D8 * d8;
+        result += D9 * d9;
+
+        return result;
     }
 
     public override string ToString()
@@ -2616,6 +2751,25 @@ public class D11Scalar : IScalar
         var variable10 = Variable10(constant10);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9, double d10)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+        result += D7 * d7;
+        result += D8 * d8;
+        result += D9 * d9;
+        result += D10 * d10;
+
+        return result;
     }
 
     public override string ToString()
@@ -2956,6 +3110,26 @@ public class D12Scalar : IScalar
         var variable11 = Variable11(constant11);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10, variable11);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9, double d10, double d11)
+    {
+        var result = Constant;
+
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+        result += D7 * d7;
+        result += D8 * d8;
+        result += D9 * d9;
+        result += D10 * d10;
+        result += D11 * d11;
+
+        return result;
     }
 
     public override string ToString()

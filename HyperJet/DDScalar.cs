@@ -46,6 +46,22 @@ public class DD1Scalar : IScalar
         return result;
     }
 
+    public double Evaluate(double d0)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        result += d0 * tmp0;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+
+        return result;
+    }
+
     public override string ToString()
     {
         return $"{Constant}hj";
@@ -297,6 +313,29 @@ public class DD2Scalar : IScalar
         var variable1 = Variable1(constant1);
 
         return (variable0, variable1);
+    }
+
+    public double Evaluate(double d0, double d1)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        result += d1 * tmp1;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+
+        return result;
     }
 
     public override string ToString()
@@ -586,6 +625,38 @@ public class DD3Scalar : IScalar
         var variable2 = Variable2(constant2);
 
         return (variable0, variable1, variable2);
+    }
+
+    public double Evaluate(double d0, double d1, double d2)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        tmp0 += d2 * D0D2;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        tmp1 += d2 * D1D2;
+        result += d1 * tmp1;
+
+        var tmp2 = 0.0;
+        tmp2 += d0 * D0D2;
+        tmp2 += d1 * D1D2;
+        tmp2 += d2 * D2D2;
+        result += d2 * tmp2;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+
+        return result;
     }
 
     public override string ToString()
@@ -917,6 +988,49 @@ public class DD4Scalar : IScalar
         var variable3 = Variable3(constant3);
 
         return (variable0, variable1, variable2, variable3);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        tmp0 += d2 * D0D2;
+        tmp0 += d3 * D0D3;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        tmp1 += d2 * D1D2;
+        tmp1 += d3 * D1D3;
+        result += d1 * tmp1;
+
+        var tmp2 = 0.0;
+        tmp2 += d0 * D0D2;
+        tmp2 += d1 * D1D2;
+        tmp2 += d2 * D2D2;
+        tmp2 += d3 * D2D3;
+        result += d2 * tmp2;
+
+        var tmp3 = 0.0;
+        tmp3 += d0 * D0D3;
+        tmp3 += d1 * D1D3;
+        tmp3 += d2 * D2D3;
+        tmp3 += d3 * D3D3;
+        result += d3 * tmp3;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+
+        return result;
     }
 
     public override string ToString()
@@ -1296,6 +1410,62 @@ public class DD5Scalar : IScalar
         var variable4 = Variable4(constant4);
 
         return (variable0, variable1, variable2, variable3, variable4);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        tmp0 += d2 * D0D2;
+        tmp0 += d3 * D0D3;
+        tmp0 += d4 * D0D4;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        tmp1 += d2 * D1D2;
+        tmp1 += d3 * D1D3;
+        tmp1 += d4 * D1D4;
+        result += d1 * tmp1;
+
+        var tmp2 = 0.0;
+        tmp2 += d0 * D0D2;
+        tmp2 += d1 * D1D2;
+        tmp2 += d2 * D2D2;
+        tmp2 += d3 * D2D3;
+        tmp2 += d4 * D2D4;
+        result += d2 * tmp2;
+
+        var tmp3 = 0.0;
+        tmp3 += d0 * D0D3;
+        tmp3 += d1 * D1D3;
+        tmp3 += d2 * D2D3;
+        tmp3 += d3 * D3D3;
+        tmp3 += d4 * D3D4;
+        result += d3 * tmp3;
+
+        var tmp4 = 0.0;
+        tmp4 += d0 * D0D4;
+        tmp4 += d1 * D1D4;
+        tmp4 += d2 * D2D4;
+        tmp4 += d3 * D3D4;
+        tmp4 += d4 * D4D4;
+        result += d4 * tmp4;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+
+        return result;
     }
 
     public override string ToString()
@@ -1729,6 +1899,77 @@ public class DD6Scalar : IScalar
         var variable5 = Variable5(constant5);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        tmp0 += d2 * D0D2;
+        tmp0 += d3 * D0D3;
+        tmp0 += d4 * D0D4;
+        tmp0 += d5 * D0D5;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        tmp1 += d2 * D1D2;
+        tmp1 += d3 * D1D3;
+        tmp1 += d4 * D1D4;
+        tmp1 += d5 * D1D5;
+        result += d1 * tmp1;
+
+        var tmp2 = 0.0;
+        tmp2 += d0 * D0D2;
+        tmp2 += d1 * D1D2;
+        tmp2 += d2 * D2D2;
+        tmp2 += d3 * D2D3;
+        tmp2 += d4 * D2D4;
+        tmp2 += d5 * D2D5;
+        result += d2 * tmp2;
+
+        var tmp3 = 0.0;
+        tmp3 += d0 * D0D3;
+        tmp3 += d1 * D1D3;
+        tmp3 += d2 * D2D3;
+        tmp3 += d3 * D3D3;
+        tmp3 += d4 * D3D4;
+        tmp3 += d5 * D3D5;
+        result += d3 * tmp3;
+
+        var tmp4 = 0.0;
+        tmp4 += d0 * D0D4;
+        tmp4 += d1 * D1D4;
+        tmp4 += d2 * D2D4;
+        tmp4 += d3 * D3D4;
+        tmp4 += d4 * D4D4;
+        tmp4 += d5 * D4D5;
+        result += d4 * tmp4;
+
+        var tmp5 = 0.0;
+        tmp5 += d0 * D0D5;
+        tmp5 += d1 * D1D5;
+        tmp5 += d2 * D2D5;
+        tmp5 += d3 * D3D5;
+        tmp5 += d4 * D4D5;
+        tmp5 += d5 * D5D5;
+        result += d5 * tmp5;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+
+        return result;
     }
 
     public override string ToString()
@@ -2222,6 +2463,94 @@ public class DD7Scalar : IScalar
         var variable6 = Variable6(constant6);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        tmp0 += d2 * D0D2;
+        tmp0 += d3 * D0D3;
+        tmp0 += d4 * D0D4;
+        tmp0 += d5 * D0D5;
+        tmp0 += d6 * D0D6;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        tmp1 += d2 * D1D2;
+        tmp1 += d3 * D1D3;
+        tmp1 += d4 * D1D4;
+        tmp1 += d5 * D1D5;
+        tmp1 += d6 * D1D6;
+        result += d1 * tmp1;
+
+        var tmp2 = 0.0;
+        tmp2 += d0 * D0D2;
+        tmp2 += d1 * D1D2;
+        tmp2 += d2 * D2D2;
+        tmp2 += d3 * D2D3;
+        tmp2 += d4 * D2D4;
+        tmp2 += d5 * D2D5;
+        tmp2 += d6 * D2D6;
+        result += d2 * tmp2;
+
+        var tmp3 = 0.0;
+        tmp3 += d0 * D0D3;
+        tmp3 += d1 * D1D3;
+        tmp3 += d2 * D2D3;
+        tmp3 += d3 * D3D3;
+        tmp3 += d4 * D3D4;
+        tmp3 += d5 * D3D5;
+        tmp3 += d6 * D3D6;
+        result += d3 * tmp3;
+
+        var tmp4 = 0.0;
+        tmp4 += d0 * D0D4;
+        tmp4 += d1 * D1D4;
+        tmp4 += d2 * D2D4;
+        tmp4 += d3 * D3D4;
+        tmp4 += d4 * D4D4;
+        tmp4 += d5 * D4D5;
+        tmp4 += d6 * D4D6;
+        result += d4 * tmp4;
+
+        var tmp5 = 0.0;
+        tmp5 += d0 * D0D5;
+        tmp5 += d1 * D1D5;
+        tmp5 += d2 * D2D5;
+        tmp5 += d3 * D3D5;
+        tmp5 += d4 * D4D5;
+        tmp5 += d5 * D5D5;
+        tmp5 += d6 * D5D6;
+        result += d5 * tmp5;
+
+        var tmp6 = 0.0;
+        tmp6 += d0 * D0D6;
+        tmp6 += d1 * D1D6;
+        tmp6 += d2 * D2D6;
+        tmp6 += d3 * D3D6;
+        tmp6 += d4 * D4D6;
+        tmp6 += d5 * D5D6;
+        tmp6 += d6 * D6D6;
+        result += d6 * tmp6;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+
+        return result;
     }
 
     public override string ToString()
@@ -2781,6 +3110,113 @@ public class DD8Scalar : IScalar
         var variable7 = Variable7(constant7);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        tmp0 += d2 * D0D2;
+        tmp0 += d3 * D0D3;
+        tmp0 += d4 * D0D4;
+        tmp0 += d5 * D0D5;
+        tmp0 += d6 * D0D6;
+        tmp0 += d7 * D0D7;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        tmp1 += d2 * D1D2;
+        tmp1 += d3 * D1D3;
+        tmp1 += d4 * D1D4;
+        tmp1 += d5 * D1D5;
+        tmp1 += d6 * D1D6;
+        tmp1 += d7 * D1D7;
+        result += d1 * tmp1;
+
+        var tmp2 = 0.0;
+        tmp2 += d0 * D0D2;
+        tmp2 += d1 * D1D2;
+        tmp2 += d2 * D2D2;
+        tmp2 += d3 * D2D3;
+        tmp2 += d4 * D2D4;
+        tmp2 += d5 * D2D5;
+        tmp2 += d6 * D2D6;
+        tmp2 += d7 * D2D7;
+        result += d2 * tmp2;
+
+        var tmp3 = 0.0;
+        tmp3 += d0 * D0D3;
+        tmp3 += d1 * D1D3;
+        tmp3 += d2 * D2D3;
+        tmp3 += d3 * D3D3;
+        tmp3 += d4 * D3D4;
+        tmp3 += d5 * D3D5;
+        tmp3 += d6 * D3D6;
+        tmp3 += d7 * D3D7;
+        result += d3 * tmp3;
+
+        var tmp4 = 0.0;
+        tmp4 += d0 * D0D4;
+        tmp4 += d1 * D1D4;
+        tmp4 += d2 * D2D4;
+        tmp4 += d3 * D3D4;
+        tmp4 += d4 * D4D4;
+        tmp4 += d5 * D4D5;
+        tmp4 += d6 * D4D6;
+        tmp4 += d7 * D4D7;
+        result += d4 * tmp4;
+
+        var tmp5 = 0.0;
+        tmp5 += d0 * D0D5;
+        tmp5 += d1 * D1D5;
+        tmp5 += d2 * D2D5;
+        tmp5 += d3 * D3D5;
+        tmp5 += d4 * D4D5;
+        tmp5 += d5 * D5D5;
+        tmp5 += d6 * D5D6;
+        tmp5 += d7 * D5D7;
+        result += d5 * tmp5;
+
+        var tmp6 = 0.0;
+        tmp6 += d0 * D0D6;
+        tmp6 += d1 * D1D6;
+        tmp6 += d2 * D2D6;
+        tmp6 += d3 * D3D6;
+        tmp6 += d4 * D4D6;
+        tmp6 += d5 * D5D6;
+        tmp6 += d6 * D6D6;
+        tmp6 += d7 * D6D7;
+        result += d6 * tmp6;
+
+        var tmp7 = 0.0;
+        tmp7 += d0 * D0D7;
+        tmp7 += d1 * D1D7;
+        tmp7 += d2 * D2D7;
+        tmp7 += d3 * D3D7;
+        tmp7 += d4 * D4D7;
+        tmp7 += d5 * D5D7;
+        tmp7 += d6 * D6D7;
+        tmp7 += d7 * D7D7;
+        result += d7 * tmp7;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+        result += D7 * d7;
+
+        return result;
     }
 
     public override string ToString()
@@ -3412,6 +3848,134 @@ public class DD9Scalar : IScalar
         var variable8 = Variable8(constant8);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        tmp0 += d2 * D0D2;
+        tmp0 += d3 * D0D3;
+        tmp0 += d4 * D0D4;
+        tmp0 += d5 * D0D5;
+        tmp0 += d6 * D0D6;
+        tmp0 += d7 * D0D7;
+        tmp0 += d8 * D0D8;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        tmp1 += d2 * D1D2;
+        tmp1 += d3 * D1D3;
+        tmp1 += d4 * D1D4;
+        tmp1 += d5 * D1D5;
+        tmp1 += d6 * D1D6;
+        tmp1 += d7 * D1D7;
+        tmp1 += d8 * D1D8;
+        result += d1 * tmp1;
+
+        var tmp2 = 0.0;
+        tmp2 += d0 * D0D2;
+        tmp2 += d1 * D1D2;
+        tmp2 += d2 * D2D2;
+        tmp2 += d3 * D2D3;
+        tmp2 += d4 * D2D4;
+        tmp2 += d5 * D2D5;
+        tmp2 += d6 * D2D6;
+        tmp2 += d7 * D2D7;
+        tmp2 += d8 * D2D8;
+        result += d2 * tmp2;
+
+        var tmp3 = 0.0;
+        tmp3 += d0 * D0D3;
+        tmp3 += d1 * D1D3;
+        tmp3 += d2 * D2D3;
+        tmp3 += d3 * D3D3;
+        tmp3 += d4 * D3D4;
+        tmp3 += d5 * D3D5;
+        tmp3 += d6 * D3D6;
+        tmp3 += d7 * D3D7;
+        tmp3 += d8 * D3D8;
+        result += d3 * tmp3;
+
+        var tmp4 = 0.0;
+        tmp4 += d0 * D0D4;
+        tmp4 += d1 * D1D4;
+        tmp4 += d2 * D2D4;
+        tmp4 += d3 * D3D4;
+        tmp4 += d4 * D4D4;
+        tmp4 += d5 * D4D5;
+        tmp4 += d6 * D4D6;
+        tmp4 += d7 * D4D7;
+        tmp4 += d8 * D4D8;
+        result += d4 * tmp4;
+
+        var tmp5 = 0.0;
+        tmp5 += d0 * D0D5;
+        tmp5 += d1 * D1D5;
+        tmp5 += d2 * D2D5;
+        tmp5 += d3 * D3D5;
+        tmp5 += d4 * D4D5;
+        tmp5 += d5 * D5D5;
+        tmp5 += d6 * D5D6;
+        tmp5 += d7 * D5D7;
+        tmp5 += d8 * D5D8;
+        result += d5 * tmp5;
+
+        var tmp6 = 0.0;
+        tmp6 += d0 * D0D6;
+        tmp6 += d1 * D1D6;
+        tmp6 += d2 * D2D6;
+        tmp6 += d3 * D3D6;
+        tmp6 += d4 * D4D6;
+        tmp6 += d5 * D5D6;
+        tmp6 += d6 * D6D6;
+        tmp6 += d7 * D6D7;
+        tmp6 += d8 * D6D8;
+        result += d6 * tmp6;
+
+        var tmp7 = 0.0;
+        tmp7 += d0 * D0D7;
+        tmp7 += d1 * D1D7;
+        tmp7 += d2 * D2D7;
+        tmp7 += d3 * D3D7;
+        tmp7 += d4 * D4D7;
+        tmp7 += d5 * D5D7;
+        tmp7 += d6 * D6D7;
+        tmp7 += d7 * D7D7;
+        tmp7 += d8 * D7D8;
+        result += d7 * tmp7;
+
+        var tmp8 = 0.0;
+        tmp8 += d0 * D0D8;
+        tmp8 += d1 * D1D8;
+        tmp8 += d2 * D2D8;
+        tmp8 += d3 * D3D8;
+        tmp8 += d4 * D4D8;
+        tmp8 += d5 * D5D8;
+        tmp8 += d6 * D6D8;
+        tmp8 += d7 * D7D8;
+        tmp8 += d8 * D8D8;
+        result += d8 * tmp8;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+        result += D7 * d7;
+        result += D8 * d8;
+
+        return result;
     }
 
     public override string ToString()
@@ -4121,6 +4685,157 @@ public class DD10Scalar : IScalar
         var variable9 = Variable9(constant9);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        tmp0 += d2 * D0D2;
+        tmp0 += d3 * D0D3;
+        tmp0 += d4 * D0D4;
+        tmp0 += d5 * D0D5;
+        tmp0 += d6 * D0D6;
+        tmp0 += d7 * D0D7;
+        tmp0 += d8 * D0D8;
+        tmp0 += d9 * D0D9;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        tmp1 += d2 * D1D2;
+        tmp1 += d3 * D1D3;
+        tmp1 += d4 * D1D4;
+        tmp1 += d5 * D1D5;
+        tmp1 += d6 * D1D6;
+        tmp1 += d7 * D1D7;
+        tmp1 += d8 * D1D8;
+        tmp1 += d9 * D1D9;
+        result += d1 * tmp1;
+
+        var tmp2 = 0.0;
+        tmp2 += d0 * D0D2;
+        tmp2 += d1 * D1D2;
+        tmp2 += d2 * D2D2;
+        tmp2 += d3 * D2D3;
+        tmp2 += d4 * D2D4;
+        tmp2 += d5 * D2D5;
+        tmp2 += d6 * D2D6;
+        tmp2 += d7 * D2D7;
+        tmp2 += d8 * D2D8;
+        tmp2 += d9 * D2D9;
+        result += d2 * tmp2;
+
+        var tmp3 = 0.0;
+        tmp3 += d0 * D0D3;
+        tmp3 += d1 * D1D3;
+        tmp3 += d2 * D2D3;
+        tmp3 += d3 * D3D3;
+        tmp3 += d4 * D3D4;
+        tmp3 += d5 * D3D5;
+        tmp3 += d6 * D3D6;
+        tmp3 += d7 * D3D7;
+        tmp3 += d8 * D3D8;
+        tmp3 += d9 * D3D9;
+        result += d3 * tmp3;
+
+        var tmp4 = 0.0;
+        tmp4 += d0 * D0D4;
+        tmp4 += d1 * D1D4;
+        tmp4 += d2 * D2D4;
+        tmp4 += d3 * D3D4;
+        tmp4 += d4 * D4D4;
+        tmp4 += d5 * D4D5;
+        tmp4 += d6 * D4D6;
+        tmp4 += d7 * D4D7;
+        tmp4 += d8 * D4D8;
+        tmp4 += d9 * D4D9;
+        result += d4 * tmp4;
+
+        var tmp5 = 0.0;
+        tmp5 += d0 * D0D5;
+        tmp5 += d1 * D1D5;
+        tmp5 += d2 * D2D5;
+        tmp5 += d3 * D3D5;
+        tmp5 += d4 * D4D5;
+        tmp5 += d5 * D5D5;
+        tmp5 += d6 * D5D6;
+        tmp5 += d7 * D5D7;
+        tmp5 += d8 * D5D8;
+        tmp5 += d9 * D5D9;
+        result += d5 * tmp5;
+
+        var tmp6 = 0.0;
+        tmp6 += d0 * D0D6;
+        tmp6 += d1 * D1D6;
+        tmp6 += d2 * D2D6;
+        tmp6 += d3 * D3D6;
+        tmp6 += d4 * D4D6;
+        tmp6 += d5 * D5D6;
+        tmp6 += d6 * D6D6;
+        tmp6 += d7 * D6D7;
+        tmp6 += d8 * D6D8;
+        tmp6 += d9 * D6D9;
+        result += d6 * tmp6;
+
+        var tmp7 = 0.0;
+        tmp7 += d0 * D0D7;
+        tmp7 += d1 * D1D7;
+        tmp7 += d2 * D2D7;
+        tmp7 += d3 * D3D7;
+        tmp7 += d4 * D4D7;
+        tmp7 += d5 * D5D7;
+        tmp7 += d6 * D6D7;
+        tmp7 += d7 * D7D7;
+        tmp7 += d8 * D7D8;
+        tmp7 += d9 * D7D9;
+        result += d7 * tmp7;
+
+        var tmp8 = 0.0;
+        tmp8 += d0 * D0D8;
+        tmp8 += d1 * D1D8;
+        tmp8 += d2 * D2D8;
+        tmp8 += d3 * D3D8;
+        tmp8 += d4 * D4D8;
+        tmp8 += d5 * D5D8;
+        tmp8 += d6 * D6D8;
+        tmp8 += d7 * D7D8;
+        tmp8 += d8 * D8D8;
+        tmp8 += d9 * D8D9;
+        result += d8 * tmp8;
+
+        var tmp9 = 0.0;
+        tmp9 += d0 * D0D9;
+        tmp9 += d1 * D1D9;
+        tmp9 += d2 * D2D9;
+        tmp9 += d3 * D3D9;
+        tmp9 += d4 * D4D9;
+        tmp9 += d5 * D5D9;
+        tmp9 += d6 * D6D9;
+        tmp9 += d7 * D7D9;
+        tmp9 += d8 * D8D9;
+        tmp9 += d9 * D9D9;
+        result += d9 * tmp9;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+        result += D7 * d7;
+        result += D8 * d8;
+        result += D9 * d9;
+
+        return result;
     }
 
     public override string ToString()
@@ -4914,6 +5629,182 @@ public class DD11Scalar : IScalar
         var variable10 = Variable10(constant10);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9, double d10)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        tmp0 += d2 * D0D2;
+        tmp0 += d3 * D0D3;
+        tmp0 += d4 * D0D4;
+        tmp0 += d5 * D0D5;
+        tmp0 += d6 * D0D6;
+        tmp0 += d7 * D0D7;
+        tmp0 += d8 * D0D8;
+        tmp0 += d9 * D0D9;
+        tmp0 += d10 * D0D10;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        tmp1 += d2 * D1D2;
+        tmp1 += d3 * D1D3;
+        tmp1 += d4 * D1D4;
+        tmp1 += d5 * D1D5;
+        tmp1 += d6 * D1D6;
+        tmp1 += d7 * D1D7;
+        tmp1 += d8 * D1D8;
+        tmp1 += d9 * D1D9;
+        tmp1 += d10 * D1D10;
+        result += d1 * tmp1;
+
+        var tmp2 = 0.0;
+        tmp2 += d0 * D0D2;
+        tmp2 += d1 * D1D2;
+        tmp2 += d2 * D2D2;
+        tmp2 += d3 * D2D3;
+        tmp2 += d4 * D2D4;
+        tmp2 += d5 * D2D5;
+        tmp2 += d6 * D2D6;
+        tmp2 += d7 * D2D7;
+        tmp2 += d8 * D2D8;
+        tmp2 += d9 * D2D9;
+        tmp2 += d10 * D2D10;
+        result += d2 * tmp2;
+
+        var tmp3 = 0.0;
+        tmp3 += d0 * D0D3;
+        tmp3 += d1 * D1D3;
+        tmp3 += d2 * D2D3;
+        tmp3 += d3 * D3D3;
+        tmp3 += d4 * D3D4;
+        tmp3 += d5 * D3D5;
+        tmp3 += d6 * D3D6;
+        tmp3 += d7 * D3D7;
+        tmp3 += d8 * D3D8;
+        tmp3 += d9 * D3D9;
+        tmp3 += d10 * D3D10;
+        result += d3 * tmp3;
+
+        var tmp4 = 0.0;
+        tmp4 += d0 * D0D4;
+        tmp4 += d1 * D1D4;
+        tmp4 += d2 * D2D4;
+        tmp4 += d3 * D3D4;
+        tmp4 += d4 * D4D4;
+        tmp4 += d5 * D4D5;
+        tmp4 += d6 * D4D6;
+        tmp4 += d7 * D4D7;
+        tmp4 += d8 * D4D8;
+        tmp4 += d9 * D4D9;
+        tmp4 += d10 * D4D10;
+        result += d4 * tmp4;
+
+        var tmp5 = 0.0;
+        tmp5 += d0 * D0D5;
+        tmp5 += d1 * D1D5;
+        tmp5 += d2 * D2D5;
+        tmp5 += d3 * D3D5;
+        tmp5 += d4 * D4D5;
+        tmp5 += d5 * D5D5;
+        tmp5 += d6 * D5D6;
+        tmp5 += d7 * D5D7;
+        tmp5 += d8 * D5D8;
+        tmp5 += d9 * D5D9;
+        tmp5 += d10 * D5D10;
+        result += d5 * tmp5;
+
+        var tmp6 = 0.0;
+        tmp6 += d0 * D0D6;
+        tmp6 += d1 * D1D6;
+        tmp6 += d2 * D2D6;
+        tmp6 += d3 * D3D6;
+        tmp6 += d4 * D4D6;
+        tmp6 += d5 * D5D6;
+        tmp6 += d6 * D6D6;
+        tmp6 += d7 * D6D7;
+        tmp6 += d8 * D6D8;
+        tmp6 += d9 * D6D9;
+        tmp6 += d10 * D6D10;
+        result += d6 * tmp6;
+
+        var tmp7 = 0.0;
+        tmp7 += d0 * D0D7;
+        tmp7 += d1 * D1D7;
+        tmp7 += d2 * D2D7;
+        tmp7 += d3 * D3D7;
+        tmp7 += d4 * D4D7;
+        tmp7 += d5 * D5D7;
+        tmp7 += d6 * D6D7;
+        tmp7 += d7 * D7D7;
+        tmp7 += d8 * D7D8;
+        tmp7 += d9 * D7D9;
+        tmp7 += d10 * D7D10;
+        result += d7 * tmp7;
+
+        var tmp8 = 0.0;
+        tmp8 += d0 * D0D8;
+        tmp8 += d1 * D1D8;
+        tmp8 += d2 * D2D8;
+        tmp8 += d3 * D3D8;
+        tmp8 += d4 * D4D8;
+        tmp8 += d5 * D5D8;
+        tmp8 += d6 * D6D8;
+        tmp8 += d7 * D7D8;
+        tmp8 += d8 * D8D8;
+        tmp8 += d9 * D8D9;
+        tmp8 += d10 * D8D10;
+        result += d8 * tmp8;
+
+        var tmp9 = 0.0;
+        tmp9 += d0 * D0D9;
+        tmp9 += d1 * D1D9;
+        tmp9 += d2 * D2D9;
+        tmp9 += d3 * D3D9;
+        tmp9 += d4 * D4D9;
+        tmp9 += d5 * D5D9;
+        tmp9 += d6 * D6D9;
+        tmp9 += d7 * D7D9;
+        tmp9 += d8 * D8D9;
+        tmp9 += d9 * D9D9;
+        tmp9 += d10 * D9D10;
+        result += d9 * tmp9;
+
+        var tmp10 = 0.0;
+        tmp10 += d0 * D0D10;
+        tmp10 += d1 * D1D10;
+        tmp10 += d2 * D2D10;
+        tmp10 += d3 * D3D10;
+        tmp10 += d4 * D4D10;
+        tmp10 += d5 * D5D10;
+        tmp10 += d6 * D6D10;
+        tmp10 += d7 * D7D10;
+        tmp10 += d8 * D8D10;
+        tmp10 += d9 * D9D10;
+        tmp10 += d10 * D10D10;
+        result += d10 * tmp10;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+        result += D7 * d7;
+        result += D8 * d8;
+        result += D9 * d9;
+        result += D10 * d10;
+
+        return result;
     }
 
     public override string ToString()
@@ -5797,6 +6688,209 @@ public class DD12Scalar : IScalar
         var variable11 = Variable11(constant11);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10, variable11);
+    }
+
+    public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9, double d10, double d11)
+    {
+        var result = 0.0;
+        
+        var tmp0 = 0.0;
+        tmp0 += d0 * D0D0;
+        tmp0 += d1 * D0D1;
+        tmp0 += d2 * D0D2;
+        tmp0 += d3 * D0D3;
+        tmp0 += d4 * D0D4;
+        tmp0 += d5 * D0D5;
+        tmp0 += d6 * D0D6;
+        tmp0 += d7 * D0D7;
+        tmp0 += d8 * D0D8;
+        tmp0 += d9 * D0D9;
+        tmp0 += d10 * D0D10;
+        tmp0 += d11 * D0D11;
+        result += d0 * tmp0;
+
+        var tmp1 = 0.0;
+        tmp1 += d0 * D0D1;
+        tmp1 += d1 * D1D1;
+        tmp1 += d2 * D1D2;
+        tmp1 += d3 * D1D3;
+        tmp1 += d4 * D1D4;
+        tmp1 += d5 * D1D5;
+        tmp1 += d6 * D1D6;
+        tmp1 += d7 * D1D7;
+        tmp1 += d8 * D1D8;
+        tmp1 += d9 * D1D9;
+        tmp1 += d10 * D1D10;
+        tmp1 += d11 * D1D11;
+        result += d1 * tmp1;
+
+        var tmp2 = 0.0;
+        tmp2 += d0 * D0D2;
+        tmp2 += d1 * D1D2;
+        tmp2 += d2 * D2D2;
+        tmp2 += d3 * D2D3;
+        tmp2 += d4 * D2D4;
+        tmp2 += d5 * D2D5;
+        tmp2 += d6 * D2D6;
+        tmp2 += d7 * D2D7;
+        tmp2 += d8 * D2D8;
+        tmp2 += d9 * D2D9;
+        tmp2 += d10 * D2D10;
+        tmp2 += d11 * D2D11;
+        result += d2 * tmp2;
+
+        var tmp3 = 0.0;
+        tmp3 += d0 * D0D3;
+        tmp3 += d1 * D1D3;
+        tmp3 += d2 * D2D3;
+        tmp3 += d3 * D3D3;
+        tmp3 += d4 * D3D4;
+        tmp3 += d5 * D3D5;
+        tmp3 += d6 * D3D6;
+        tmp3 += d7 * D3D7;
+        tmp3 += d8 * D3D8;
+        tmp3 += d9 * D3D9;
+        tmp3 += d10 * D3D10;
+        tmp3 += d11 * D3D11;
+        result += d3 * tmp3;
+
+        var tmp4 = 0.0;
+        tmp4 += d0 * D0D4;
+        tmp4 += d1 * D1D4;
+        tmp4 += d2 * D2D4;
+        tmp4 += d3 * D3D4;
+        tmp4 += d4 * D4D4;
+        tmp4 += d5 * D4D5;
+        tmp4 += d6 * D4D6;
+        tmp4 += d7 * D4D7;
+        tmp4 += d8 * D4D8;
+        tmp4 += d9 * D4D9;
+        tmp4 += d10 * D4D10;
+        tmp4 += d11 * D4D11;
+        result += d4 * tmp4;
+
+        var tmp5 = 0.0;
+        tmp5 += d0 * D0D5;
+        tmp5 += d1 * D1D5;
+        tmp5 += d2 * D2D5;
+        tmp5 += d3 * D3D5;
+        tmp5 += d4 * D4D5;
+        tmp5 += d5 * D5D5;
+        tmp5 += d6 * D5D6;
+        tmp5 += d7 * D5D7;
+        tmp5 += d8 * D5D8;
+        tmp5 += d9 * D5D9;
+        tmp5 += d10 * D5D10;
+        tmp5 += d11 * D5D11;
+        result += d5 * tmp5;
+
+        var tmp6 = 0.0;
+        tmp6 += d0 * D0D6;
+        tmp6 += d1 * D1D6;
+        tmp6 += d2 * D2D6;
+        tmp6 += d3 * D3D6;
+        tmp6 += d4 * D4D6;
+        tmp6 += d5 * D5D6;
+        tmp6 += d6 * D6D6;
+        tmp6 += d7 * D6D7;
+        tmp6 += d8 * D6D8;
+        tmp6 += d9 * D6D9;
+        tmp6 += d10 * D6D10;
+        tmp6 += d11 * D6D11;
+        result += d6 * tmp6;
+
+        var tmp7 = 0.0;
+        tmp7 += d0 * D0D7;
+        tmp7 += d1 * D1D7;
+        tmp7 += d2 * D2D7;
+        tmp7 += d3 * D3D7;
+        tmp7 += d4 * D4D7;
+        tmp7 += d5 * D5D7;
+        tmp7 += d6 * D6D7;
+        tmp7 += d7 * D7D7;
+        tmp7 += d8 * D7D8;
+        tmp7 += d9 * D7D9;
+        tmp7 += d10 * D7D10;
+        tmp7 += d11 * D7D11;
+        result += d7 * tmp7;
+
+        var tmp8 = 0.0;
+        tmp8 += d0 * D0D8;
+        tmp8 += d1 * D1D8;
+        tmp8 += d2 * D2D8;
+        tmp8 += d3 * D3D8;
+        tmp8 += d4 * D4D8;
+        tmp8 += d5 * D5D8;
+        tmp8 += d6 * D6D8;
+        tmp8 += d7 * D7D8;
+        tmp8 += d8 * D8D8;
+        tmp8 += d9 * D8D9;
+        tmp8 += d10 * D8D10;
+        tmp8 += d11 * D8D11;
+        result += d8 * tmp8;
+
+        var tmp9 = 0.0;
+        tmp9 += d0 * D0D9;
+        tmp9 += d1 * D1D9;
+        tmp9 += d2 * D2D9;
+        tmp9 += d3 * D3D9;
+        tmp9 += d4 * D4D9;
+        tmp9 += d5 * D5D9;
+        tmp9 += d6 * D6D9;
+        tmp9 += d7 * D7D9;
+        tmp9 += d8 * D8D9;
+        tmp9 += d9 * D9D9;
+        tmp9 += d10 * D9D10;
+        tmp9 += d11 * D9D11;
+        result += d9 * tmp9;
+
+        var tmp10 = 0.0;
+        tmp10 += d0 * D0D10;
+        tmp10 += d1 * D1D10;
+        tmp10 += d2 * D2D10;
+        tmp10 += d3 * D3D10;
+        tmp10 += d4 * D4D10;
+        tmp10 += d5 * D5D10;
+        tmp10 += d6 * D6D10;
+        tmp10 += d7 * D7D10;
+        tmp10 += d8 * D8D10;
+        tmp10 += d9 * D9D10;
+        tmp10 += d10 * D10D10;
+        tmp10 += d11 * D10D11;
+        result += d10 * tmp10;
+
+        var tmp11 = 0.0;
+        tmp11 += d0 * D0D11;
+        tmp11 += d1 * D1D11;
+        tmp11 += d2 * D2D11;
+        tmp11 += d3 * D3D11;
+        tmp11 += d4 * D4D11;
+        tmp11 += d5 * D5D11;
+        tmp11 += d6 * D6D11;
+        tmp11 += d7 * D7D11;
+        tmp11 += d8 * D8D11;
+        tmp11 += d9 * D9D11;
+        tmp11 += d10 * D10D11;
+        tmp11 += d11 * D11D11;
+        result += d11 * tmp11;
+
+        result *= 0.5;
+        result += Constant;
+        
+        result += D0 * d0;
+        result += D1 * d1;
+        result += D2 * d2;
+        result += D3 * d3;
+        result += D4 * d4;
+        result += D5 * d5;
+        result += D6 * d6;
+        result += D7 * d7;
+        result += D8 * d8;
+        result += D9 * d9;
+        result += D10 * d10;
+        result += D11 * d11;
+
+        return result;
     }
 
     public override string ToString()
