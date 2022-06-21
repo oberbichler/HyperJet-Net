@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD1Scalar : IScalar
+public class DD1Scalar : IScalar, IEquatable<DD1Scalar>, IComparable<DD1Scalar>
 {
     public double Constant;
     public double D0;
@@ -66,6 +66,74 @@ public class DD1Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD1Scalar lhs, DD1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD1Scalar lhs, DD1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD1Scalar lhs, DD1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD1Scalar lhs, DD1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD1Scalar lhs, DD1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD1Scalar lhs, DD1Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD1Scalar);
+	}
+
+	public bool Equals(DD1Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD1Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -253,7 +321,7 @@ public class DD1Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD2Scalar : IScalar
+public class DD2Scalar : IScalar, IEquatable<DD2Scalar>, IComparable<DD2Scalar>
 {
     public double Constant;
     public double D0;
@@ -314,6 +382,18 @@ public class DD2Scalar : IScalar
 
         return (variable0, variable1);
     }
+    
+    public static DD2Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 2)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD2Scalar[2];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1)
     {
@@ -342,6 +422,74 @@ public class DD2Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD2Scalar lhs, DD2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD2Scalar lhs, DD2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD2Scalar lhs, DD2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD2Scalar lhs, DD2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD2Scalar lhs, DD2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD2Scalar lhs, DD2Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD2Scalar);
+	}
+
+	public bool Equals(DD2Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD2Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -544,7 +692,7 @@ public class DD2Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD3Scalar : IScalar
+public class DD3Scalar : IScalar, IEquatable<DD3Scalar>, IComparable<DD3Scalar>
 {
     public double Constant;
     public double D0;
@@ -626,6 +774,19 @@ public class DD3Scalar : IScalar
 
         return (variable0, variable1, variable2);
     }
+    
+    public static DD3Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 3)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD3Scalar[3];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1, double d2)
     {
@@ -663,6 +824,74 @@ public class DD3Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD3Scalar lhs, DD3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD3Scalar lhs, DD3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD3Scalar lhs, DD3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD3Scalar lhs, DD3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD3Scalar lhs, DD3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD3Scalar lhs, DD3Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD3Scalar);
+	}
+
+	public bool Equals(DD3Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD3Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -883,7 +1112,7 @@ public class DD3Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD4Scalar : IScalar
+public class DD4Scalar : IScalar, IEquatable<DD4Scalar>, IComparable<DD4Scalar>
 {
     public double Constant;
     public double D0;
@@ -989,6 +1218,20 @@ public class DD4Scalar : IScalar
 
         return (variable0, variable1, variable2, variable3);
     }
+    
+    public static DD4Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 4)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD4Scalar[4];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1, double d2, double d3)
     {
@@ -1037,6 +1280,74 @@ public class DD4Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD4Scalar lhs, DD4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD4Scalar lhs, DD4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD4Scalar lhs, DD4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD4Scalar lhs, DD4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD4Scalar lhs, DD4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD4Scalar lhs, DD4Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD4Scalar);
+	}
+
+	public bool Equals(DD4Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD4Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -1278,7 +1589,7 @@ public class DD4Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD5Scalar : IScalar
+public class DD5Scalar : IScalar, IEquatable<DD5Scalar>, IComparable<DD5Scalar>
 {
     public double Constant;
     public double D0;
@@ -1411,6 +1722,21 @@ public class DD5Scalar : IScalar
 
         return (variable0, variable1, variable2, variable3, variable4);
     }
+    
+    public static DD5Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 5)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD5Scalar[5];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4)
     {
@@ -1472,6 +1798,74 @@ public class DD5Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD5Scalar lhs, DD5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD5Scalar lhs, DD5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD5Scalar lhs, DD5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD5Scalar lhs, DD5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD5Scalar lhs, DD5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD5Scalar lhs, DD5Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD5Scalar);
+	}
+
+	public bool Equals(DD5Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD5Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -1737,7 +2131,7 @@ public class DD5Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD6Scalar : IScalar
+public class DD6Scalar : IScalar, IEquatable<DD6Scalar>, IComparable<DD6Scalar>
 {
     public double Constant;
     public double D0;
@@ -1900,6 +2294,22 @@ public class DD6Scalar : IScalar
 
         return (variable0, variable1, variable2, variable3, variable4, variable5);
     }
+    
+    public static DD6Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 6)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD6Scalar[6];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5)
     {
@@ -1976,6 +2386,74 @@ public class DD6Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD6Scalar lhs, DD6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD6Scalar lhs, DD6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD6Scalar lhs, DD6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD6Scalar lhs, DD6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD6Scalar lhs, DD6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD6Scalar lhs, DD6Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD6Scalar);
+	}
+
+	public bool Equals(DD6Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD6Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -2268,7 +2746,7 @@ public class DD6Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD7Scalar : IScalar
+public class DD7Scalar : IScalar, IEquatable<DD7Scalar>, IComparable<DD7Scalar>
 {
     public double Constant;
     public double D0;
@@ -2464,6 +2942,23 @@ public class DD7Scalar : IScalar
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6);
     }
+    
+    public static DD7Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 7)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD7Scalar[7];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6)
     {
@@ -2557,6 +3052,74 @@ public class DD7Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD7Scalar lhs, DD7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD7Scalar lhs, DD7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD7Scalar lhs, DD7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD7Scalar lhs, DD7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD7Scalar lhs, DD7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD7Scalar lhs, DD7Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD7Scalar);
+	}
+
+	public bool Equals(DD7Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD7Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -2879,7 +3442,7 @@ public class DD7Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD8Scalar : IScalar
+public class DD8Scalar : IScalar, IEquatable<DD8Scalar>, IComparable<DD8Scalar>
 {
     public double Constant;
     public double D0;
@@ -3111,6 +3674,24 @@ public class DD8Scalar : IScalar
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7);
     }
+    
+    public static DD8Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 8)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD8Scalar[8];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+        variables[7] = Variable7(constants[7]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7)
     {
@@ -3223,6 +3804,74 @@ public class DD8Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD8Scalar lhs, DD8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD8Scalar lhs, DD8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD8Scalar lhs, DD8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD8Scalar lhs, DD8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD8Scalar lhs, DD8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD8Scalar lhs, DD8Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD8Scalar);
+	}
+
+	public bool Equals(DD8Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD8Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -3578,7 +4227,7 @@ public class DD8Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD9Scalar : IScalar
+public class DD9Scalar : IScalar, IEquatable<DD9Scalar>, IComparable<DD9Scalar>
 {
     public double Constant;
     public double D0;
@@ -3849,6 +4498,25 @@ public class DD9Scalar : IScalar
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8);
     }
+    
+    public static DD9Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 9)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD9Scalar[9];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+        variables[7] = Variable7(constants[7]);
+        variables[8] = Variable8(constants[8]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8)
     {
@@ -3982,6 +4650,74 @@ public class DD9Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD9Scalar lhs, DD9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD9Scalar lhs, DD9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD9Scalar lhs, DD9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD9Scalar lhs, DD9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD9Scalar lhs, DD9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD9Scalar lhs, DD9Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD9Scalar);
+	}
+
+	public bool Equals(DD9Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD9Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -4373,7 +5109,7 @@ public class DD9Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD10Scalar : IScalar
+public class DD10Scalar : IScalar, IEquatable<DD10Scalar>, IComparable<DD10Scalar>
 {
     public double Constant;
     public double D0;
@@ -4686,6 +5422,26 @@ public class DD10Scalar : IScalar
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9);
     }
+    
+    public static DD10Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 10)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD10Scalar[10];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+        variables[7] = Variable7(constants[7]);
+        variables[8] = Variable8(constants[8]);
+        variables[9] = Variable9(constants[9]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9)
     {
@@ -4842,6 +5598,74 @@ public class DD10Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD10Scalar lhs, DD10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD10Scalar lhs, DD10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD10Scalar lhs, DD10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD10Scalar lhs, DD10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD10Scalar lhs, DD10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD10Scalar lhs, DD10Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD10Scalar);
+	}
+
+	public bool Equals(DD10Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD10Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -5272,7 +6096,7 @@ public class DD10Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD11Scalar : IScalar
+public class DD11Scalar : IScalar, IEquatable<DD11Scalar>, IComparable<DD11Scalar>
 {
     public double Constant;
     public double D0;
@@ -5630,6 +6454,27 @@ public class DD11Scalar : IScalar
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10);
     }
+    
+    public static DD11Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 11)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD11Scalar[11];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+        variables[7] = Variable7(constants[7]);
+        variables[8] = Variable8(constants[8]);
+        variables[9] = Variable9(constants[9]);
+        variables[10] = Variable10(constants[10]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9, double d10)
     {
@@ -5811,6 +6656,74 @@ public class DD11Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD11Scalar lhs, DD11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD11Scalar lhs, DD11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD11Scalar lhs, DD11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD11Scalar lhs, DD11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD11Scalar lhs, DD11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD11Scalar lhs, DD11Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD11Scalar);
+	}
+
+	public bool Equals(DD11Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD11Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
@@ -6283,7 +7196,7 @@ public class DD11Scalar : IScalar
 
 [StructLayout(LayoutKind.Sequential)]
 [DebuggerDisplay("{Constant}")]
-public class DD12Scalar : IScalar
+public class DD12Scalar : IScalar, IEquatable<DD12Scalar>, IComparable<DD12Scalar>
 {
     public double Constant;
     public double D0;
@@ -6689,6 +7602,28 @@ public class DD12Scalar : IScalar
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10, variable11);
     }
+    
+    public static DD12Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 12)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD12Scalar[12];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+        variables[7] = Variable7(constants[7]);
+        variables[8] = Variable8(constants[8]);
+        variables[9] = Variable9(constants[9]);
+        variables[10] = Variable10(constants[10]);
+        variables[11] = Variable11(constants[11]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9, double d10, double d11)
     {
@@ -6897,6 +7832,74 @@ public class DD12Scalar : IScalar
     {
         return $"{Constant}hj";
     }
+    
+	public static bool operator ==(DD12Scalar lhs, DD12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant == rhs.Constant;
+	}
+
+	public static bool operator !=(DD12Scalar lhs, DD12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant != rhs.Constant;
+	}
+
+	public static bool operator >(DD12Scalar lhs, DD12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+		
+		return lhs.Constant > rhs.Constant;
+	}
+
+	public static bool operator <(DD12Scalar lhs, DD12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant < rhs.Constant;
+	}
+
+	public static bool operator >=(DD12Scalar lhs, DD12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant >= rhs.Constant;
+	}
+	
+	public static bool operator <=(DD12Scalar lhs, DD12Scalar rhs)
+	{
+		if (lhs is null || rhs is null)
+			return false;
+
+		return lhs.Constant <= rhs.Constant;
+	}
+    
+	public override bool Equals(object obj)
+	{
+		return Equals(obj as DD12Scalar);
+	}
+
+	public bool Equals(DD12Scalar other)
+	{
+		return this == other;
+	}
+	
+	public override int GetHashCode()
+	{
+		return Constant.GetHashCode();
+	}
+
+	public int CompareTo(DD12Scalar other)
+	{
+		return Constant.CompareTo(other.Constant);
+	}
 
     // Data access
 
