@@ -113,7 +113,7 @@ else
     }
 
 <#
-    }
+}
 #>
     public static (<#= scalar #><# for (var i = 1; i < size; i++) { #>, <#= scalar #><# } #>) Variables(double constant0<# for (var i = 1; i < size; i++) { #>, double constant<#= i #><# } #>)
     {
@@ -127,6 +127,24 @@ for (var i = 0; i < size; i++)
 #>
 
         return (variable0<# for (var i = 1; i < size; i++) { #>, variable<#= i #><# } #>);
+    }
+    
+    public static <#= scalar #>[] Variables(double[] constants)
+    {
+        if (constants.Length != <#= size #>)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new <#= scalar #>[<#= size #>];
+<#
+for (var i = 0; i < size; i++)
+{
+#>
+        variables[<#= i #>] = Variable<#= i #>(constants[<#= i #>]);
+<#
+}
+#>
+
+        return variables;
     }
 
 <#

@@ -382,6 +382,18 @@ public class DD2Scalar : IScalar, IEquatable<DD2Scalar>, IComparable<DD2Scalar>
 
         return (variable0, variable1);
     }
+    
+    public static DD2Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 2)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD2Scalar[2];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+
+        return variables;
+    }
 
     public double Evaluate(double d0, double d1)
     {
@@ -761,6 +773,19 @@ public class DD3Scalar : IScalar, IEquatable<DD3Scalar>, IComparable<DD3Scalar>
         var variable2 = Variable2(constant2);
 
         return (variable0, variable1, variable2);
+    }
+    
+    public static DD3Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 3)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD3Scalar[3];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+
+        return variables;
     }
 
     public double Evaluate(double d0, double d1, double d2)
@@ -1192,6 +1217,20 @@ public class DD4Scalar : IScalar, IEquatable<DD4Scalar>, IComparable<DD4Scalar>
         var variable3 = Variable3(constant3);
 
         return (variable0, variable1, variable2, variable3);
+    }
+    
+    public static DD4Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 4)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD4Scalar[4];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+
+        return variables;
     }
 
     public double Evaluate(double d0, double d1, double d2, double d3)
@@ -1682,6 +1721,21 @@ public class DD5Scalar : IScalar, IEquatable<DD5Scalar>, IComparable<DD5Scalar>
         var variable4 = Variable4(constant4);
 
         return (variable0, variable1, variable2, variable3, variable4);
+    }
+    
+    public static DD5Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 5)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD5Scalar[5];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+
+        return variables;
     }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4)
@@ -2239,6 +2293,22 @@ public class DD6Scalar : IScalar, IEquatable<DD6Scalar>, IComparable<DD6Scalar>
         var variable5 = Variable5(constant5);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5);
+    }
+    
+    public static DD6Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 6)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD6Scalar[6];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+
+        return variables;
     }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5)
@@ -2871,6 +2941,23 @@ public class DD7Scalar : IScalar, IEquatable<DD7Scalar>, IComparable<DD7Scalar>
         var variable6 = Variable6(constant6);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6);
+    }
+    
+    public static DD7Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 7)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD7Scalar[7];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+
+        return variables;
     }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6)
@@ -3586,6 +3673,24 @@ public class DD8Scalar : IScalar, IEquatable<DD8Scalar>, IComparable<DD8Scalar>
         var variable7 = Variable7(constant7);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7);
+    }
+    
+    public static DD8Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 8)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD8Scalar[8];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+        variables[7] = Variable7(constants[7]);
+
+        return variables;
     }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7)
@@ -4392,6 +4497,25 @@ public class DD9Scalar : IScalar, IEquatable<DD9Scalar>, IComparable<DD9Scalar>
         var variable8 = Variable8(constant8);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8);
+    }
+    
+    public static DD9Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 9)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD9Scalar[9];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+        variables[7] = Variable7(constants[7]);
+        variables[8] = Variable8(constants[8]);
+
+        return variables;
     }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8)
@@ -5297,6 +5421,26 @@ public class DD10Scalar : IScalar, IEquatable<DD10Scalar>, IComparable<DD10Scala
         var variable9 = Variable9(constant9);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9);
+    }
+    
+    public static DD10Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 10)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD10Scalar[10];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+        variables[7] = Variable7(constants[7]);
+        variables[8] = Variable8(constants[8]);
+        variables[9] = Variable9(constants[9]);
+
+        return variables;
     }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9)
@@ -6309,6 +6453,27 @@ public class DD11Scalar : IScalar, IEquatable<DD11Scalar>, IComparable<DD11Scala
         var variable10 = Variable10(constant10);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10);
+    }
+    
+    public static DD11Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 11)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD11Scalar[11];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+        variables[7] = Variable7(constants[7]);
+        variables[8] = Variable8(constants[8]);
+        variables[9] = Variable9(constants[9]);
+        variables[10] = Variable10(constants[10]);
+
+        return variables;
     }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9, double d10)
@@ -7436,6 +7601,28 @@ public class DD12Scalar : IScalar, IEquatable<DD12Scalar>, IComparable<DD12Scala
         var variable11 = Variable11(constant11);
 
         return (variable0, variable1, variable2, variable3, variable4, variable5, variable6, variable7, variable8, variable9, variable10, variable11);
+    }
+    
+    public static DD12Scalar[] Variables(double[] constants)
+    {
+        if (constants.Length != 12)
+            throw new ArgumentException("Invalid size.", nameof(constants));
+
+        var variables = new DD12Scalar[12];
+        variables[0] = Variable0(constants[0]);
+        variables[1] = Variable1(constants[1]);
+        variables[2] = Variable2(constants[2]);
+        variables[3] = Variable3(constants[3]);
+        variables[4] = Variable4(constants[4]);
+        variables[5] = Variable5(constants[5]);
+        variables[6] = Variable6(constants[6]);
+        variables[7] = Variable7(constants[7]);
+        variables[8] = Variable8(constants[8]);
+        variables[9] = Variable9(constants[9]);
+        variables[10] = Variable10(constants[10]);
+        variables[11] = Variable11(constants[11]);
+
+        return variables;
     }
 
     public double Evaluate(double d0, double d1, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9, double d10, double d11)
